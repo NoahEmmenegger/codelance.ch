@@ -1,11 +1,12 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import Button from '../components/common/Button';
 import Quote from '../components/common/Quote';
 
 const Home: NextPage = () => {
     return (
-        <div>
+        <>
             <Head>
                 <title>Codelance GmbH</title>
                 <meta name="description" content="Codelance GmbH" />
@@ -14,7 +15,7 @@ const Home: NextPage = () => {
 
             <main>
                 <div className="flex">
-                    <div className="w-1/2">
+                    <div className="w-1/3 h-[50vh] p-20">
                         <h1>Freelancer</h1>
                         <Quote classname="py-10">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -22,10 +23,12 @@ const Home: NextPage = () => {
                         </Quote>
                         <Button text="learn more" />
                     </div>
-                    <div>bild</div>
+                    <div className="w-2/3 h-auto relative">
+                        <Image src="/images/HomeImage.svg" layout="fill" alt="Freelancer coding a website" />
+                    </div>
                 </div>
             </main>
-        </div>
+        </>
     );
 };
 
