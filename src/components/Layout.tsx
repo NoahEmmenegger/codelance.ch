@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header />
-            <main>{children}</main>
+            <main className="p-10">{children}</main>
             <Footer />
         </div>
     );

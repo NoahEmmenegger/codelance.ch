@@ -6,4 +6,8 @@
     html {
         font-family: Poppins;
     }
+
+    h1 {
+        @apply font-semibold text-7xl text-primary;
+    }
 }
