@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Button from '../components/common/Button';
 
 const Home: NextPage = () => {
     return (
@@ -14,7 +13,6 @@ const Home: NextPage = () => {
             <main>
                 <h1>Welcome to Codelance GmbH!</h1>
             </main>
-            <Button />
         </div>
     );
 };

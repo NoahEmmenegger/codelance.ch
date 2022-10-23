@@ -4,7 +4,7 @@ import { Head, Html, Main, NextScript } from 'next/document';
 
 export default function Document() {
     return (
-        <Html>
+        <Html className="bg-accent">
             <Head>
                 <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
             </Head>

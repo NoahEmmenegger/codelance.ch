@@ -4,7 +4,7 @@ import FooterWave from './common/svg/FooterWave';
 
 export default function Footer() {
     return (
-        <div>
+        <footer>
             <FooterWave />
             <div className="bg-secondary p-10">
                 <Image src="/logo.svg" height={44} width={240} alt="Logo of Codelance GmbH" />
@@ -29,7 +29,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     );
 }
 

@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Footer from './Footer';
+import Header from './Header';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
     return (
@@ -9,9 +10,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <meta name="description" content="Codelance GmbH" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <header>
-                <h1>Codelance GmbH</h1>
-            </header>
+            <Header />
             <main>{children}</main>
             <Footer />
         </div>
