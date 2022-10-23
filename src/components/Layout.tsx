@@ -1,8 +1,7 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
-import Button from '../components/common/Button';
+import Footer from './Footer';
 
-const Home: NextPage = () => {
+export default function Layout({ children }: { children: React.ReactNode }) {
     return (
         <div>
             <Head>
@@ -10,13 +9,11 @@ const Home: NextPage = () => {
                 <meta name="description" content="Codelance GmbH" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-
-            <main>
-                <h1>Welcome to Codelance GmbH!</h1>
-            </main>
-            <Button />
+            <header>
+                <h1>Codelance GmbH</h1>
+            </header>
+            <main>{children}</main>
+            <Footer />
         </div>
     );
-};
-
-export default Home;
+}
