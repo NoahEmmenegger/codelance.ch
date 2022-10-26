@@ -6,6 +6,7 @@ import WordsAnimation from '../components/animations/WordsAnimation';
 import Button from '../components/common/Button';
 import Quote from '../components/common/Quote';
 import ArrowSVG from '../components/common/svg/Arrow';
+import BlubSVG from '../components/common/svg/Blub';
 
 const Home: NextPage = () => {
     return (
@@ -18,7 +19,7 @@ const Home: NextPage = () => {
 
             <main>
                 <div className="flex">
-                    <div className="w-1/3  p-20">
+                    <div className="w-1/3  p-28">
                         <WordsAnimation text="Turn your" replay={true} />
                         <WordsAnimation text="IT idea into" replay={true} delay={0.4} />
                         <WordsAnimation text="reality." replay={true} delay={1.4} />
@@ -43,6 +44,9 @@ const Home: NextPage = () => {
                     </div>
                     <div className="w-2/3 h-auto relative">
                         <Image src="/images/HomeImage.svg" layout="fill" alt="Freelancer coding a website" />
+                        <div className="absolute h-auto w-full -z-10 -bottom-64">
+                            <BlubSVG />
+                        </div>{' '}
                     </div>
                 </div>
             </main>
