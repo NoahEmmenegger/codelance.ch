@@ -11,4 +11,8 @@
     h1 {
         @apply font-semibold text-7xl text-primary;
     }
+
+    h2 {
+        @apply font-semibold text-5xl text-primary;
+    }
 }

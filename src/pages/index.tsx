@@ -7,6 +7,7 @@ import Button from '../components/common/Button';
 import Quote from '../components/common/Quote';
 import ArrowSVG from '../components/common/svg/Arrow';
 import BlubSVG from '../components/common/svg/Blub';
+import CircleSVG from '../components/common/svg/Circle';
 import Wave1 from '../components/common/svg/Wave1';
 import Wave2 from '../components/common/svg/Wave2';
 
@@ -60,9 +61,23 @@ const Home: NextPage = () => {
                             <Testimonial />
                         </div>
                     </div>
+                    <Wave2 />
                 </div>
                 <div>
-                    <Wave2 />
+                    <div className="flex p-20">
+                        <p className="w-1/2">
+                            <CircleSVG />
+                        </p>
+                        <div className="w-1/2 m-auto">
+                            <h2>Noah Emmenegger</h2>
+                            <Quote>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor
+                                sit amet, consectetur adipiscing elit veniam Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit veniam Lorem ipsum dolor sit amet
+                            </Quote>
+                        </div>
+                    </div>
                 </div>
             </main>
         </>
