@@ -5,6 +5,7 @@ import Image from 'next/image';
 import WordsAnimation from '../components/animations/WordsAnimation';
 import Button from '../components/common/Button';
 import Quote from '../components/common/Quote';
+import ArrowSVG from '../components/common/svg/Arrow';
 
 const Home: NextPage = () => {
     return (
@@ -30,7 +31,14 @@ const Home: NextPage = () => {
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
                             </Quote>
-                            <Button text="learn more" />
+                            <Button text="learn more">
+                                <div className="absolute h-auto w-52 -right-64 -top-14">
+                                    <ArrowSVG />
+                                </div>
+                                <div className="absolute h-auto w-52 scale-x-[-1] -rotate-30 -left-52 top-10">
+                                    <ArrowSVG />
+                                </div>
+                            </Button>
                         </motion.div>
                     </div>
                     <div className="w-2/3 h-auto relative">

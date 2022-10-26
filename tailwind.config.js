@@ -9,6 +9,9 @@ module.exports = {
                 tertiary: '#E3E5F1',
                 accent: '#F6F6F6',
             },
+            rotate: {
+                30: '30deg',
+            },
         },
     },
     plugins: [],
