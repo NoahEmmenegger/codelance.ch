@@ -1,13 +1,28 @@
-import { SVGProps } from 'react';
+import { motion } from 'framer-motion';
 
-const ArrowSVG = (props: SVGProps<SVGSVGElement>) => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1621.02 715.83" {...props}>
-        <path
-            d="M1605.92 6.53c-33.98-22.38-60.67 19.95-60.67 19.95-140.76 232.18-449.8 392.36-776.63 450.61-374.58 66.76-535.98-19.2-595.81-70.43 69.27-17.99 344.27-89.58 372.53-99.61 32.36-11.48 40.45-19.26 40.45-54.86s-67.96-14.56-67.96-14.56S82.59 354.12 30.82 373.54c-45.39 17.02-28.6 48.97-23.77 56.59.57.91 1.21 1.77 1.9 2.59 11.78 14.17 149.36 186.55 169.51 228.41 17.88 37.13 35.48 46.55 39.03 48.79.7.44 4.33 2.65 5.07 3.02 8.13 4.11 31 8.19 41.24-20.67 15.77-44.4-37.21-95.99-37.21-95.99L106.55 462.31c-6.37-7.11-7.91-16.29-5.61-24.36 44.66 46.93 107.05 73.91 107.05 73.91s196.58 143.19 720.81 9.71c524.22-133.48 677.12-452.06 677.12-452.06s33.98-40.61 0-62.98Z"
-            style={{
-                fill: '#787e96',
-            }}
-        />
+const ArrowSVG = ({ delay = 0 }) => (
+    <svg id="Ebene_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1579.84 695.37">
+        <defs>
+            <style>
+                {'.cls-1{fill:none;stroke:#787e96;stroke-linecap:round;stroke-miterlimit:10;stroke-width:60px}'}
+            </style>
+        </defs>
+        <g id="Layer_2">
+            <motion.path
+                className="cls-1"
+                d="M1549.84 30s-213.57 336.54-684.4 453.03-645.57 24.27-771.78-92.22"
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ pathLength: 1, opacity: 1 }}
+                transition={{ duration: 1, ease: 'easeInOut', delay: delay }}
+            />
+            <motion.path
+                className="cls-1"
+                d="M518.11 264.11 42.77 406.09c-11.16 3.33-17.35 18.29-8.71 26.1 59.6 53.93 119.22 112.18 158.84 233.17"
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ pathLength: 1, opacity: 1 }}
+                transition={{ duration: 1, ease: 'easeInOut', delay: delay + 1 }}
+            />
+        </g>
     </svg>
 );
 

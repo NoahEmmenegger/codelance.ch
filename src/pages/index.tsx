@@ -33,10 +33,10 @@ const Home: NextPage = () => {
                             </Quote>
                             <Button text="learn more">
                                 <div className="absolute h-auto w-52 -right-64 -top-14">
-                                    <ArrowSVG />
+                                    <ArrowSVG delay={5} />
                                 </div>
                                 <div className="absolute h-auto w-52 scale-x-[-1] -rotate-30 -left-52 top-10">
-                                    <ArrowSVG />
+                                    <ArrowSVG delay={8} />
                                 </div>
                             </Button>
                         </motion.div>
