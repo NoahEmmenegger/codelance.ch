@@ -32,8 +32,10 @@ const Home: NextPage = () => {
                             transition={{ delay: 2.4, duration: 0.5 }}
                         >
                             <Quote classname="py-10">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                                We develop and design your individual website / app according and finding the best
+                                solution for you and your company. We consider your preferences and discuss them with
+                                each other. If you are interested, we can arranged a meeting to discuss your dream
+                                project.
                             </Quote>
                             <Button text="learn more">
                                 <div className="absolute h-auto w-52 -right-64 -top-14">
