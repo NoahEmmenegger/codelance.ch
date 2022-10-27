@@ -32,10 +32,12 @@ const Home: NextPage = () => {
                             transition={{ delay: 2.4, duration: 0.5 }}
                         >
                             <Quote classname="py-10">
-                                We develop and design your individual website / app according and finding the best
-                                solution for you and your company. We consider your preferences and discuss them with
-                                each other. If you are interested, we can arranged a meeting to discuss your dream
-                                project.
+                                Whether it&apos;s a website, a customer app or you even have a specific idea for an
+                                online product, we&apos;ll be happy to advise you. Simply make an appointment with us.
+                                We will find the best solution for you.
+                                {/* Sei es ein Webauftritt, eine Kunden-App oder haben Sie gar eine konkrete Idee für ein
+                                Online-Produkt, sind wir da, um Sie zu unterstützen. Vereinbaren Sie gerne einen Termin
+                                mit uns. Wir finden garantiert die beste Lösung für Sie. */}
                             </Quote>
                             <Button text="learn more">
                                 <div className="absolute h-auto w-52 -right-64 -top-14">
