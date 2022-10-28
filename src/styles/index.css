@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: Poppins;
+        @apply text-primary;
+    }
+
+    h1 {
+        @apply font-semibold text-6xl text-primary lg:text-7xl;
+    }
+
+    h2 {
+        @apply font-semibold text-4xl text-primary lg:text-5xl;
+    }
+}
