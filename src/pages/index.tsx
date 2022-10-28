@@ -28,7 +28,7 @@ const Home: NextPage = () => {
                             animate={{ opacity: 1 }}
                             transition={{ delay: 2.4, duration: 0.5 }}
                         >
-                            <Quote classname="py-10 hidden lg:block">
+                            <Quote classname="py-10 hidden lg:flex">
                                 Whether it&apos;s a website, a customer app or you even have a specific idea for an
                                 online product, we&apos;ll be happy to advise you. Simply make an appointment with us.
                                 We will find the best solution for you.
@@ -36,12 +36,12 @@ const Home: NextPage = () => {
                                 Online-Produkt, sind wir da, um Sie zu unterstützen. Vereinbaren Sie gerne einen Termin
                                 mit uns. Wir finden garantiert die beste Lösung für Sie. */}
                             </Quote>
-                            <div className="pt-10 text-center">
+                            <div className="pt-10 text-center lg:hidden">
                                 Whether it&apos;s a website, a customer app or you even have a specific idea for an
                                 online product, we&apos;ll be happy to advise you. Simply make an appointment with us.
                                 We will find the best solution for you.
                             </div>
-                            <Button className="m-auto mt-5 mb-20" text="learn more">
+                            <Button className="m-auto mt-5 mb-20 lg:m-0" text="learn more">
                                 <div className="absolute h-auto w-52 -right-64 -top-14">
                                     <ArrowSVG delay={5} />
                                 </div>
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
                             </Button>
                         </motion.div>
                     </div>
-                    <div className="h-40 ml-auto w-2/3 lg:w-2/3 lg:h-auto relative">
+                    <div className="h-40 ml-auto w-2/3 lg:h-auto relative">
                         <Image src="/images/HomeImage.svg" layout="fill" alt="Freelancer coding a website" />
                         <div className="absolute h-80 w-80 lg:h-auto lg:w-full -z-10 -bottom-64">
                             <BlubSVG />
