@@ -7,9 +7,6 @@ import Button from '../components/common/Button';
 import Quote from '../components/common/Quote';
 import ArrowSVG from '../components/common/svg/Arrow';
 import BlubSVG from '../components/common/svg/Blub';
-import CircleSVG from '../components/common/svg/Circle';
-import Wave1 from '../components/common/svg/Wave1';
-import Wave2 from '../components/common/svg/Wave2';
 
 const Home: NextPage = () => {
     return (
@@ -21,8 +18,8 @@ const Home: NextPage = () => {
             </Head>
 
             <main>
-                <div className="flex">
-                    <div className="w-1/3  p-28">
+                <div className="flex flex-col lg:flex-row">
+                    <div className="p-10 h-1/2 lg:p-28 lg:w-1/3 ">
                         <WordsAnimation text="Turn your" replay={true} />
                         <WordsAnimation text="IT idea into" replay={true} delay={0.4} />
                         <WordsAnimation text="reality." replay={true} delay={1.4} />
@@ -31,7 +28,7 @@ const Home: NextPage = () => {
                             animate={{ opacity: 1 }}
                             transition={{ delay: 2.4, duration: 0.5 }}
                         >
-                            <Quote classname="py-10">
+                            <Quote classname="py-10 hidden lg:block">
                                 Whether it&apos;s a website, a customer app or you even have a specific idea for an
                                 online product, we&apos;ll be happy to advise you. Simply make an appointment with us.
                                 We will find the best solution for you.
@@ -39,7 +36,12 @@ const Home: NextPage = () => {
                                 Online-Produkt, sind wir da, um Sie zu unterstützen. Vereinbaren Sie gerne einen Termin
                                 mit uns. Wir finden garantiert die beste Lösung für Sie. */}
                             </Quote>
-                            <Button text="learn more">
+                            <div className="pt-10 text-center">
+                                Whether it&apos;s a website, a customer app or you even have a specific idea for an
+                                online product, we&apos;ll be happy to advise you. Simply make an appointment with us.
+                                We will find the best solution for you.
+                            </div>
+                            <Button className="m-auto mt-5 mb-20" text="learn more">
                                 <div className="absolute h-auto w-52 -right-64 -top-14">
                                     <ArrowSVG delay={5} />
                                 </div>
@@ -49,14 +51,14 @@ const Home: NextPage = () => {
                             </Button>
                         </motion.div>
                     </div>
-                    <div className="w-2/3 h-auto relative">
+                    <div className="h-40 ml-auto w-2/3 lg:w-2/3 lg:h-auto relative">
                         <Image src="/images/HomeImage.svg" layout="fill" alt="Freelancer coding a website" />
-                        <div className="absolute h-auto w-full -z-10 -bottom-64">
+                        <div className="absolute h-80 w-80 lg:h-auto lg:w-full -z-10 -bottom-64">
                             <BlubSVG />
                         </div>{' '}
                     </div>
                 </div>
-                <div>
+                {/* <div>
                     <Wave1 />
                     <div className="bg-secondary px-44 pb-36">
                         <div className="flex px-28">
@@ -82,7 +84,7 @@ const Home: NextPage = () => {
                             </Quote>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </main>
         </>
     );

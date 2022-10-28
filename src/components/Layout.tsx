@@ -4,7 +4,7 @@ import Header from './Header';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
     return (
-        <div>
+        <div className="overflow-hidden">
             <Head>
                 <title>Codelance GmbH</title>
                 <meta name="description" content="Codelance GmbH" />

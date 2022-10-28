@@ -43,7 +43,14 @@ const WordsAnimation: FC<Props> = ({ text, delay = 0, duration = 0.2, replay, ..
     };
 
     return (
-        <motion.h1 style={{}} variants={container} initial="hidden" animate={replay ? 'visible' : 'hidden'} {...props}>
+        <motion.h1
+            className="text-center lg:text-left"
+            style={{}}
+            variants={container}
+            initial="hidden"
+            animate={replay ? 'visible' : 'hidden'}
+            {...props}
+        >
             {words.map((word, index) => (
                 <motion.span key={index} variants={child}>
                     {word + '\u00A0'}
