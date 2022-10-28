@@ -16,3 +16,15 @@
         @apply font-semibold text-4xl text-primary lg:text-5xl;
     }
 }
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+/* From Public Directory */
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins.ttf');
+    font-style: medium;
+    font-weight: normal;
+    font-display: swap;
+}
