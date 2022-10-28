@@ -8,7 +8,7 @@ export default function Footer() {
             <FooterWave />
             <div className="bg-secondary p-10">
                 <Image src="/logo.svg" height={44} width={240} alt="Logo of Codelance GmbH" />
-                <div className="flex">
+                <div className="flex flex-col lg:flex-row">
                     <TextBlock>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam
@@ -18,9 +18,9 @@ export default function Footer() {
                         labore et dolore magna aliqua. Ut enim ad minim veniam
                     </TextBlock>
                 </div>
-                <div className="flex justify-between mt-16">
+                <div className="flex flex-col lg:flex-row justify-between mt-16">
                     <p>Deutsch</p>
-                    <div>
+                    <div className="m-auto lg:mr-0">
                         <FooterLink href="/" name="Home" />
                         <FooterLink href="/services" name="Services" />
                         <FooterLink href="/team" name="Team" />
@@ -35,12 +35,12 @@ export default function Footer() {
 
 const FooterLink = ({ href, name }: { href: string; name: string }) => (
     <Link href={href}>
-        <a className="text-primary font-semibold text-xl ml-5">{name}</a>
+        <a className="text-primary font-semibold text-sm lg:text-xl ml-5">{name}</a>
     </Link>
 );
 
 const TextBlock = ({ children }: { children: React.ReactNode }) => (
-    <div className="max-w-xl mr-10">
+    <div className="max-w-xl mr-10 py-5">
         <p>{children}</p>
     </div>
 );
