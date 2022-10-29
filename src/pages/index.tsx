@@ -20,13 +20,13 @@ const Home: NextPage = () => {
             <main>
                 <div className="flex flex-col lg:flex-row">
                     <div className="pt-10 h-1/2 lg:p-28 lg:w-1/3 ">
-                        <WordsAnimation text="Turn your" replay={true} />
-                        <WordsAnimation text="IT idea into" replay={true} delay={0.4} />
-                        <WordsAnimation text="reality." replay={true} delay={1.4} />
+                        <WordsAnimation text="Turn your" replay={true} delay={1} />
+                        <WordsAnimation text="IT idea into" replay={true} delay={1.4} />
+                        <WordsAnimation text="reality." replay={true} delay={2.4} />
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 2.4, duration: 0.5 }}
+                            transition={{ delay: 3.4, duration: 0.5 }}
                         >
                             <Quote classname="py-10 hidden lg:flex">
                                 Whether it&apos;s a website, a customer app or you even have a specific idea for an
@@ -43,16 +43,16 @@ const Home: NextPage = () => {
                             </div>
                             <Button className="m-auto mt-5 mb-20 lg:m-0" text="learn more">
                                 <div className="absolute h-auto w-52 -right-64 -top-14 cursor-default">
-                                    <ArrowSVG delay={5} />
+                                    <ArrowSVG delay={6} />
                                 </div>
                                 <div className="absolute h-auto w-52 scale-x-[-1] -rotate-30 -left-52 top-10 cursor-default">
-                                    <ArrowSVG delay={8} />
+                                    <ArrowSVG delay={9} />
                                 </div>
                             </Button>
                         </motion.div>
                     </div>
                     <div className="h-40 ml-auto w-2/3 lg:h-auto relative">
-                        <Image src="/images/HomeImage.svg" layout="fill" alt="Freelancer coding a website" />
+                        <Image priority src="/images/HomeImage.svg" layout="fill" alt="Freelancer coding a website" />
                         <div className="absolute h-80 w-80 lg:h-auto lg:w-full -z-10 -bottom-64">
                             <BlubSVG />
                         </div>{' '}

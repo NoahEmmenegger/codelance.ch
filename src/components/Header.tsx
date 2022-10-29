@@ -18,7 +18,7 @@ export default function Header() {
             </div>
             <div className="flex justify-between items-center p-5 pl-8 lg:p-10">
                 <div className="w-1/3">
-                    <Image src="/logo.svg" className="" height={44} width={240} alt="Logo of Codelance GmbH" />
+                    <Image priority src="/logo.svg" className="" height={44} width={240} alt="Logo of Codelance GmbH" />
                 </div>
                 <div className="hidden lg:flex w-1/3 justify-center">
                     <HeaderLink href="/" name="Home" />
