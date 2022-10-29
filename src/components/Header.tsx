@@ -64,8 +64,8 @@ export default function Header() {
 
 function HeaderLink({ href, name }: { href: string; name: string }) {
     return (
-        <a href={href} className="p-10 text-5xl uppercase lg:normal-case lg:p-0 lg:ml-10 lg:text-xl">
-            {name}
-        </a>
+        <Link href={href}>
+            <a className="p-10 text-5xl uppercase lg:normal-case lg:p-0 lg:ml-10 lg:text-xl">{name}</a>
+        </Link>
     );
 }

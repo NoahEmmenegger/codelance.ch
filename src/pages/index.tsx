@@ -59,7 +59,7 @@ const Home: NextPage = () => {
                         <Image priority src="/images/HomeImage.svg" layout="fill" alt="Freelancer coding a website" />
                         <div className="absolute h-80 w-80 lg:h-auto lg:w-full -z-10 -bottom-64">
                             <BlubSVG />
-                        </div>{' '}
+                        </div>
                     </div>
                 </div>
                 <div>
