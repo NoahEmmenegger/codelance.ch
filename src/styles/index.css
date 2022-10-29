@@ -12,7 +12,7 @@
     }
 
     h2 {
-        @apply font-semibold text-4xl text-primary lg:text-5xl;
+        @apply font-semibold text-3xl text-primary lg:text-5xl;
     }
 
     a {
