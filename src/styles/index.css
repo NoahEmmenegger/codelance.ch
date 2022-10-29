@@ -4,8 +4,7 @@
 
 @layer base {
     html {
-        font-family: Poppins, sans-serif;
-        @apply text-primary;
+        @apply text-primary font-poppins;
     }
 
     h1 {
@@ -21,7 +20,4 @@
 @font-face {
     font-family: 'Poppins';
     src: url('/fonts/Poppins.ttf');
-    font-style: medium;
-    font-weight: normal;
-    font-display: swap;
 }
