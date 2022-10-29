@@ -19,7 +19,7 @@ const Home: NextPage = () => {
 
             <main>
                 <div className="flex flex-col lg:flex-row">
-                    <div className="pt-10 h-1/2 lg:p-28 lg:w-1/3 ">
+                    <div className="pt-10 h-1/2 lg:p-28 lg:w-2/3 2xl:w-1/3 ">
                         <WordsAnimation text="Turn your" replay={true} delay={1} />
                         <WordsAnimation text="IT idea into" replay={true} delay={1.4} />
                         <WordsAnimation text="reality." replay={true} delay={2.4} />
