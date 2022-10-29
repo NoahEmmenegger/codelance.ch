@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import Button from './common/Button';
 import CloseSVG from './common/svg/Close';
@@ -17,9 +18,19 @@ export default function Header() {
                 </svg>
             </div>
             <div className="flex justify-between items-center p-5 pl-8 lg:p-10">
-                <div className="w-1/3">
-                    <Image priority src="/logo.svg" className="" height={44} width={240} alt="Logo of Codelance GmbH" />
-                </div>
+                <Link href="/">
+                    <a className="w-1/3">
+                        <Image
+                            priority
+                            src="/logo.svg"
+                            className=""
+                            height={44}
+                            width={240}
+                            alt="Logo of Codelance GmbH"
+                        />
+                    </a>
+                </Link>
+
                 <div className="hidden lg:flex w-1/3 justify-center">
                     <HeaderLink href="/" name="Home" />
                     <HeaderLink href="/services" name="Services" />
@@ -28,13 +39,13 @@ export default function Header() {
                 <div className="hidden lg:flex w-1/3 m-auto ml-auto justify-end">
                     <Button text="contact us" />
                 </div>
-                <div onClick={() => setIsMenuOpen(true)} className="w-10 cursor-pointer lg:hidden">
+                <div onClick={() => setIsMenuOpen(true)} className="w-10 lg:hidden">
                     <HamburgerSVG />
                 </div>
                 {isMenuOpen && (
                     <div className="fixed top-0 left-0 w-full h-full bg-tertiary z-50 lg:hidden">
                         <div className="flex justify-end p-5">
-                            <div onClick={() => setIsMenuOpen(false)} className="w-10 cursor-pointer">
+                            <div onClick={() => setIsMenuOpen(false)} className="w-10">
                                 <CloseSVG />
                             </div>
                         </div>

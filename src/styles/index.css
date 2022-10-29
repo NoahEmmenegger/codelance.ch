@@ -14,6 +14,10 @@
     h2 {
         @apply font-semibold text-4xl text-primary lg:text-5xl;
     }
+
+    a {
+        @apply cursor-default lg:cursor-pointer;
+    }
 }
 
 /* From Public Directory */
