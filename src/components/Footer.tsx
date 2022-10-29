@@ -10,16 +10,22 @@ export default function Footer() {
                 <Image src="/logo.svg" height={44} width={240} alt="Logo of Codelance GmbH" />
                 <div className="flex flex-col lg:flex-row">
                     <TextBlock>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam
+                        <b>Codelance GmbH</b>
+                        <p>Kirchgasse 3</p>
+                        <p>6340 Baar</p>
+                        <p>Switzerland</p>
+                        <p>info@codelance.ch</p>
                     </TextBlock>
                     <TextBlock>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam
+                        <p>
+                            We are a motivated Swiss Developer team which would be happy to help you realize your dream
+                            IT project. Never think that a project would be impossible. We are happy to connect with you
+                            and discuss your project idea.
+                        </p>
                     </TextBlock>
                 </div>
                 <div className="flex flex-col lg:flex-row justify-between mt-16">
-                    <p>Deutsch</p>
+                    <p>🇨🇭 Deutsch</p>
                     <div className="m-auto lg:mr-0">
                         <FooterLink href="/" name="Home" />
                         <FooterLink href="/services" name="Services" />
@@ -35,12 +41,10 @@ export default function Footer() {
 
 const FooterLink = ({ href, name }: { href: string; name: string }) => (
     <Link href={href}>
-        <a className="text-primary font-semibold text-sm lg:text-xl ml-5">{name}</a>
+        <a className="text-primary font-semibold text-xs ml-2 lg:text-xl lg:ml-5">{name}</a>
     </Link>
 );
 
 const TextBlock = ({ children }: { children: React.ReactNode }) => (
-    <div className="max-w-xl mr-10 py-5">
-        <p>{children}</p>
-    </div>
+    <div className="mr-10 py-5 lg:w-1/2">{children}</div>
 );
