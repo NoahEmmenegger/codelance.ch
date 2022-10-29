@@ -19,7 +19,7 @@ const Home: NextPage = () => {
 
             <main>
                 <div className="flex flex-col lg:flex-row">
-                    <div className="p-10 h-1/2 lg:p-28 lg:w-1/3 ">
+                    <div className="pt-10 h-1/2 lg:p-28 lg:w-1/3 ">
                         <WordsAnimation text="Turn your" replay={true} />
                         <WordsAnimation text="IT idea into" replay={true} delay={0.4} />
                         <WordsAnimation text="reality." replay={true} delay={1.4} />
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
                                 Online-Produkt, sind wir da, um Sie zu unterstützen. Vereinbaren Sie gerne einen Termin
                                 mit uns. Wir finden garantiert die beste Lösung für Sie. */}
                             </Quote>
-                            <div className="pt-10 text-center lg:hidden">
+                            <div className="pt-10 px-10 text-center lg:hidden">
                                 Whether it&apos;s a website, a customer app or you even have a specific idea for an
                                 online product, we&apos;ll be happy to advise you. Simply make an appointment with us.
                                 We will find the best solution for you.
