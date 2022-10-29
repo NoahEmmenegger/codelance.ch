@@ -8,7 +8,7 @@
     }
 
     h1 {
-        @apply font-semibold text-6xl text-primary lg:text-7xl;
+        @apply font-semibold text-6xl text-primary font-sans lg:font-poppins lg:text-7xl;
     }
 
     h2 {
