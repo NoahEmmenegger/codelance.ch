@@ -1,13 +1,23 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 import Button from './common/Button';
 import CloseSVG from './common/svg/Close';
 import HamburgerSVG from './common/svg/Hamburger';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const router = useRouter();
+
+    useEffect(() => {
+        if (isMenuOpen) {
+            setIsMenuOpen(!isMenuOpen);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [router.asPath]);
+
     return (
         <header>
             <div className="absolute w-1/2 max-w-[383px] max-h-[125]">
