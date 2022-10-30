@@ -56,7 +56,13 @@ const Home: NextPage = () => {
                         </motion.div>
                     </div>
                     <div className="h-40 ml-auto w-2/3 lg:h-auto relative">
-                        <Image priority src="/images/HomeImage.svg" layout="fill" alt="Freelancer coding a website" />
+                        <Image
+                            className="select-none pointer-events-none"
+                            priority
+                            src="/images/HomeImage.svg"
+                            layout="fill"
+                            alt="Freelancer coding a website"
+                        />
                         <div className="absolute h-80 w-80 lg:h-auto lg:w-full -z-10 -bottom-64">
                             <BlubSVG />
                         </div>

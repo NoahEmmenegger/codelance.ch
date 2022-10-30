@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -19,11 +20,11 @@ export default function Header() {
             </div>
             <div className="flex justify-between items-center p-5 pl-8 lg:p-10">
                 <Link href="/">
-                    <a className="w-1/3">
+                    <a className="w-1/3 select-none">
                         <Image
                             priority
                             src="/logo.svg"
-                            className=""
+                            className="select-none pointer-events-none"
                             height={44}
                             width={240}
                             alt="Logo of Codelance GmbH"
@@ -65,7 +66,13 @@ export default function Header() {
 function HeaderLink({ href, name }: { href: string; name: string }) {
     return (
         <Link href={href}>
-            <a className="p-10 text-5xl uppercase lg:normal-case lg:p-0 lg:ml-10 lg:text-xl">{name}</a>
+            <motion.a
+                className="p-10 text-5xl uppercase lg:normal-case lg:p-0 lg:ml-10 lg:text-xl select-none"
+                whileHover={{ scale: 1.2 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 50 }}
+            >
+                {name}
+            </motion.a>
         </Link>
     );
 }

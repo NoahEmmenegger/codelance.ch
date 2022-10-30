@@ -7,7 +7,15 @@ export default function Footer() {
         <footer>
             <FooterWave />
             <div className="bg-secondary p-10">
-                <Image src="/logo.svg" height={44} width={240} alt="Logo of Codelance GmbH" />
+                <div className="select-none">
+                    <Image
+                        className="select-none pointer-events-none"
+                        src="/logo.svg"
+                        height={44}
+                        width={240}
+                        alt="Logo of Codelance GmbH"
+                    />
+                </div>
                 <div className="flex flex-col lg:flex-row">
                     <TextBlock>
                         <b>Codelance GmbH</b>

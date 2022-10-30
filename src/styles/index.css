@@ -4,7 +4,7 @@
 
 @layer base {
     html {
-        @apply text-primary font-poppins;
+        @apply text-primary font-poppins selection:bg-primary selection:text-white;
     }
 
     h1 {
