@@ -10,6 +10,7 @@ module.exports = {
                 primary: '#2C3359',
                 secondary: '#CBCEDE',
                 tertiary: '#E3E5F1',
+                quaternary: '#6e63ad',
                 accent: '#F6F6F6',
             },
             rotate: {
