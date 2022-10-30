@@ -11,6 +11,12 @@ export default function Team() {
                     image="/images/team/avatar.svg"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquet nisl, eget aliquam nisl nisl eu nunc. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquet nisl, eget aliquam nisl nisl eu nunc."
                 />
+                <TeamMember
+                    name="Jan Walker"
+                    role="CEO"
+                    image="/images/team/avatar.svg"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquet nisl, eget aliquam nisl nisl eu nunc. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquet nisl, eget aliquam nisl nisl eu nunc."
+                />
             </div>
         </div>
     );
