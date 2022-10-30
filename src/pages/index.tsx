@@ -45,12 +45,12 @@ const Home: NextPage = () => {
                                 online product, we&apos;ll be happy to advise you. Simply make an appointment with us.
                                 We will find the best solution for you.
                             </div>
-                            <Button className="m-auto mt-5 mb-20 lg:m-0" text="learn more">
+                            <Button className="m-auto ml-auto mr-auto mt-5 mb-20 lg:m-0" text="learn more">
                                 <div className="absolute h-auto w-52 -right-64 -top-14 cursor-default">
-                                    <ArrowSVG delay={6} />
+                                    <ArrowSVG delay={9} />
                                 </div>
                                 <div className="absolute h-auto w-52 scale-x-[-1] -rotate-30 -left-52 top-10 cursor-default">
-                                    <ArrowSVG delay={9} />
+                                    <ArrowSVG delay={6} />
                                 </div>
                             </Button>
                         </motion.div>
