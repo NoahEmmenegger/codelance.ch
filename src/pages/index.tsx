@@ -17,7 +17,12 @@ const Home: NextPage = () => {
         <>
             <Head>
                 <title>Codelance GmbH</title>
-                <meta name="description" content="Codelance GmbH" />
+                <meta
+                    name="description"
+                    content="Whether it's a website, a customer app or you even have a specific idea for an
+                                online product, we'll be happy to advise you. Simply make an appointment with us.
+                                We will find the best solution for you."
+                />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
