@@ -10,13 +10,15 @@ export default function Team() {
                     name="Noah Emmenegger"
                     role="Developer"
                     image="/images/team/avatar.svg"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquet nisl, eget aliquam nisl nisl eu nunc. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquet nisl, eget aliquam nisl nisl eu nunc."
+                    description="Noah Emmenegger loves to code and is a full stack developer. He is currently studying at GIBZ in Zug and in the following year he will start his Bachelor in computer science. In his free time he likes to go to the gym and work on his side projects. He created this company because he wants to help other companies to implement their dream IT projects."
                 />
                 <TeamMember
                     name="Jan Walker"
                     role="Developer"
                     image="/images/team/avatar.svg"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquet nisl, eget aliquam nisl nisl eu nunc. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquet nisl, eget aliquam nisl nisl eu nunc."
+                    description="Jan Walker previously attended a four year long apprenticeship specializing in Software Development. 
+                    Durring this time he worked as a full stack developer in multiple departments in one of the biggest pharmaceutical and diagnostics company in the world.
+                    "
                 />
             </div>
         </div>
