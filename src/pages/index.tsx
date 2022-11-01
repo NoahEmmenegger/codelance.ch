@@ -21,14 +21,8 @@ const Home: NextPage = () => {
         <>
             <Head>
                 <title>Codelance GmbH</title>
-                <meta
-                    name="description"
-                    content="Codelance GmbH is a software development company based in Baar, Switzerland. We develop web applications and mobile apps for startups and enterprises. We are experts in React, React Native, Node.js, and Next.js. We also provide consulting services for startups and enterprises. If you are looking for a software development company, you are in the right place."
-                />
-                <meta
-                    name="keywords"
-                    content="software development, web development, mobile development, react, react native, node.js, next.js, consulting"
-                />
+                <meta name="description" content={t('metaDescription')} />
+                <meta name="keywords" content={t('metaKeywords')} />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
@@ -43,19 +37,8 @@ const Home: NextPage = () => {
                             animate={{ opacity: 1 }}
                             transition={{ delay: 3.4, duration: 0.5 }}
                         >
-                            <Quote classname="py-10 hidden lg:flex">
-                                Whether it&apos;s a website, a customer app or you even have a specific idea for an
-                                online product, we&apos;ll be happy to advise you. Simply make an appointment with us.
-                                We will find the best solution for you.
-                                {/* Sei es ein Webauftritt, eine Kunden-App oder haben Sie gar eine konkrete Idee für ein
-                                Online-Produkt, sind wir da, um Sie zu unterstützen. Vereinbaren Sie gerne einen Termin
-                                mit uns. Wir finden garantiert die beste Lösung für Sie. */}
-                            </Quote>
-                            <div className="pt-10 px-10 text-center lg:hidden">
-                                Whether it&apos;s a website, a customer app or you even have a specific idea for an
-                                online product, we&apos;ll be happy to advise you. Simply make an appointment with us.
-                                We will find the best solution for you.
-                            </div>
+                            <Quote classname="py-10 hidden lg:flex">{t('quote')}</Quote>
+                            <div className="pt-10 px-10 text-center lg:hidden">{t('quote')}</div>
                             <Button className="m-auto ml-auto mr-auto mt-5 mb-20 lg:m-0" text="learn more">
                                 <div className="absolute h-auto w-52 -right-64 -top-14 cursor-default">
                                     <ArrowSVG delay={9} />
@@ -91,16 +74,7 @@ const Home: NextPage = () => {
                         </p>
                         <div className="pt-10 lg:p-0 lg:w-1/2 m-auto">
                             <h2 className="text-center lg:text-left">Noah Emmenegger</h2>
-                            <Quote classname="hidden lg:flex lg:pt-5">
-                                Realize your IT projects with us and benefit from our many years of experience and
-                                know-how. We support you in the implementation of your IT projects and accompany you
-                                from planning to realization. We are your partner for the implementation of your IT
-                                projects. You have an idea? We make it real.
-                                {/* Realisieren Sie Ihre IT-Projekte mit uns und profitieren Sie von unserer langjährigen
-                                Erfahrung und unserem Know-how. Wir unterstützen Sie bei der Umsetzung Ihrer IT-Projekte
-                                und begleiten Sie von der Planung bis zur Realisierung. Wir sind Ihr Partner für die
-                                Umsetzung Ihrer IT-Projekte. Sie haben eine Idee? Wir machen sie real. */}
-                            </Quote>
+                            <Quote classname="hidden lg:flex lg:pt-5">{t('noah_quote')}</Quote>
                             <div className="pt-10 px-10 text-center lg:hidden">
                                 I look forward to getting to know you in a personal meeting!
                             </div>
@@ -114,7 +88,7 @@ const Home: NextPage = () => {
 
 export const getServerSideProps = async ({ locale }: { locale: string }) => ({
     props: {
-        ...(await serverSideTranslations(locale, ['common'])),
+        ...(await serverSideTranslations(locale, ['common', 'testimonials'])),
     },
 });
 
