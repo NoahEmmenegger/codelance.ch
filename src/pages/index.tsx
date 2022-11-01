@@ -39,7 +39,7 @@ const Home: NextPage = () => {
                         >
                             <Quote classname="py-10 hidden lg:flex">{t('quote')}</Quote>
                             <div className="pt-10 px-10 text-center lg:hidden">{t('quote')}</div>
-                            <Button className="m-auto ml-auto mr-auto mt-5 mb-20 lg:m-0" text="learn more">
+                            <Button className="m-auto ml-auto mr-auto mt-5 mb-20 lg:m-0" text={t('learn_more')}>
                                 <div className="absolute h-auto w-52 -right-64 -top-14 cursor-default">
                                     <ArrowSVG delay={9} />
                                 </div>
