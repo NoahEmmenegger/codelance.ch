@@ -4,6 +4,7 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import WordsAnimation from '../components/animations/WordsAnimation';
 import Button from '../components/common/Button';
 import Quote from '../components/common/Quote';
@@ -29,24 +30,26 @@ const Home: NextPage = () => {
             <main>
                 <div className="flex flex-col lg:flex-row">
                     <div className="pt-10 h-1/2 lg:p-28 lg:w-2/3 2xl:w-1/3 ">
-                        <WordsAnimation text={t('slogan_1')} replay={true} delay={1} />
-                        <WordsAnimation text={t('slogan_2')} replay={true} delay={1.4} />
-                        <WordsAnimation text={t('slogan_3')} replay={true} delay={2.4} />
+                        <WordsAnimation text={t('slogan_1')} replay={true} delay={0.5} />
+                        <WordsAnimation text={t('slogan_2')} replay={true} delay={0.9} />
+                        <WordsAnimation text={t('slogan_3')} replay={true} delay={2} />
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 3.4, duration: 0.5 }}
+                            transition={{ delay: 3, duration: 0.5 }}
                         >
                             <Quote classname="py-10 hidden lg:flex">{t('quote')}</Quote>
                             <div className="pt-10 px-10 text-center lg:hidden">{t('quote')}</div>
-                            <Button className="m-auto ml-auto mr-auto mt-5 mb-20 lg:m-0" text={t('learn_more')}>
-                                <div className="absolute h-auto w-52 -right-64 -top-14 cursor-default">
-                                    <ArrowSVG delay={9} />
-                                </div>
-                                <div className="absolute h-auto w-52 scale-x-[-1] -rotate-30 -left-52 top-10 cursor-default">
-                                    <ArrowSVG delay={6} />
-                                </div>
-                            </Button>
+                            <Link href="/services">
+                                <Button className="m-auto ml-auto mr-auto mt-5 mb-20 lg:m-0" text={t('learn_more')}>
+                                    <div className="absolute h-auto w-52 -right-64 -top-14 cursor-default">
+                                        <ArrowSVG delay={8} />
+                                    </div>
+                                    <div className="absolute h-auto w-52 scale-x-[-1] -rotate-30 -left-52 top-10 cursor-default">
+                                        <ArrowSVG delay={5} />
+                                    </div>
+                                </Button>
+                            </Link>
                         </motion.div>
                     </div>
                     <div className="h-40 ml-auto w-2/3 lg:h-auto relative">
@@ -74,10 +77,16 @@ const Home: NextPage = () => {
                         </p>
                         <div className="pt-10 lg:p-0 lg:w-1/2 m-auto">
                             <h2 className="text-center lg:text-left">Noah Emmenegger</h2>
-                            <Quote classname="hidden lg:flex lg:pt-5">{t('noah_quote')}</Quote>
+                            <Quote classname="hidden mb-5 lg:flex lg:pt-5">{t('noah_quote')}</Quote>
                             <div className="pt-10 px-10 text-center lg:hidden">
                                 I look forward to getting to know you in a personal meeting!
                             </div>
+                            <Link href="/team">
+                                <Button
+                                    className="m-auto ml-auto mr-auto mt-5 mb-20 lg:m-0 text-lg"
+                                    text={t('learn_more_about_us')}
+                                ></Button>
+                            </Link>
                         </div>
                     </div>
                 </div>

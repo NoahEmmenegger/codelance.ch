@@ -12,7 +12,7 @@ export default function Button({ children, className, text, onClick = () => {} }
         <motion.div
             onClick={onClick}
             className={
-                'bg-primary text-white rounded-full w-min px-5 py-1 text-2xl cursor-pointer uppercase whitespace-nowrap select-none' +
+                'bg-primary text-white rounded-full w-min px-5 py-1 text-2xl cursor-pointer uppercase whitespace-nowrap select-none ' +
                 className
             }
             whileHover={{ scale: 1.05 }}
