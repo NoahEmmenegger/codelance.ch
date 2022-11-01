@@ -21,22 +21,22 @@ export default function Services() {
                 <Service
                     name={t('service_3_name')}
                     image="/images/services/web_design.svg"
-                    description={t('service_2_description')}
+                    description={t('service_3_description')}
                 />
                 <Service
                     name={t('service_4_name')}
                     image="/images/services/seo.svg"
-                    description={t('service_3_description')}
+                    description={t('service_4_description')}
                 />
                 <Service
                     name={t('service_5_name')}
                     image="/images/services/digital_marketing.svg"
-                    description={t('service_4_description')}
+                    description={t('service_5_description')}
                 />
                 <Service
                     name={t('service_6_name')}
                     image="/images/services/web_hosting.svg"
-                    description={t('service_5_description')}
+                    description={t('service_6_description')}
                 />
             </div>
         </div>
