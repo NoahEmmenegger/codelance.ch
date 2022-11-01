@@ -8,13 +8,13 @@ export default function Team() {
             <div className="flex flex-col lg:flex-row justify-center items-center mt-10">
                 <TeamMember
                     name="Noah Emmenegger"
-                    role="CEO"
+                    role="Developer"
                     image="/images/team/avatar.svg"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquet nisl, eget aliquam nisl nisl eu nunc. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquet nisl, eget aliquam nisl nisl eu nunc."
                 />
                 <TeamMember
                     name="Jan Walker"
-                    role="CEO"
+                    role="Developer"
                     image="/images/team/avatar.svg"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquet nisl, eget aliquam nisl nisl eu nunc. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquet nisl, eget aliquam nisl nisl eu nunc."
                 />
