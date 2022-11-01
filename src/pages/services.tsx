@@ -1,3 +1,4 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Image from 'next/image';
 
 export default function services() {
@@ -57,3 +58,9 @@ const Service = ({ name, image, description }: ServiceProps) => {
         </div>
     );
 };
+
+export const getServerSideProps = async ({ locale }: { locale: string }) => ({
+    props: {
+        ...(await serverSideTranslations(locale, ['common', 'home', 'testimonials'])),
+    },
+});

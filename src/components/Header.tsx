@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -10,6 +11,8 @@ import HamburgerSVG from './common/svg/Hamburger';
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const router = useRouter();
+
+    const { t } = useTranslation('common');
 
     useEffect(() => {
         if (isMenuOpen) {
@@ -43,12 +46,12 @@ export default function Header() {
                 </Link>
 
                 <div className="hidden lg:flex w-1/3 justify-center">
-                    <HeaderLink href="/" name="Home" />
-                    <HeaderLink href="/services" name="Services" />
-                    <HeaderLink href="/team" name="Team" />
+                    <HeaderLink href="/" name={t('nav_1')} />
+                    <HeaderLink href="/services" name={t('nav_2')} />
+                    <HeaderLink href="/team" name={t('nav_3')} />
                 </div>
                 <div className="hidden lg:flex w-1/3 m-auto ml-auto justify-end">
-                    <Button text="contact us" />
+                    <Button text={t('contact_us')} />
                 </div>
                 <div onClick={() => setIsMenuOpen(true)} className="w-10 lg:hidden">
                     <HamburgerSVG />

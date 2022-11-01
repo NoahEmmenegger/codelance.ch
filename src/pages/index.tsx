@@ -15,7 +15,7 @@ import Wave2 from '../components/common/svg/Wave2';
 import Testimonials from '../components/index/Testimonials';
 
 const Home: NextPage = () => {
-    const { t } = useTranslation('common');
+    const { t } = useTranslation('home');
 
     return (
         <>
@@ -88,7 +88,7 @@ const Home: NextPage = () => {
 
 export const getServerSideProps = async ({ locale }: { locale: string }) => ({
     props: {
-        ...(await serverSideTranslations(locale, ['common', 'testimonials'])),
+        ...(await serverSideTranslations(locale, ['common', 'home', 'testimonials'])),
     },
 });
 

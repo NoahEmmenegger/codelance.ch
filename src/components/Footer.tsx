@@ -1,8 +1,10 @@
+import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import Link from 'next/link';
 import FooterWave from './common/svg/FooterWave';
 
 export default function Footer() {
+    const { t } = useTranslation('common');
     return (
         <footer>
             <FooterWave />
@@ -25,21 +27,25 @@ export default function Footer() {
                         <p>info@codelance.ch</p>
                     </TextBlock>
                     <TextBlock>
-                        <p>
-                            We are a motivated Swiss Developer team which would be happy to help you realize your dream
-                            IT project. Never think that a project would be impossible. We are happy to connect with you
-                            and discuss your project idea.
-                        </p>
+                        <p>{t('footerText')}</p>
                     </TextBlock>
                 </div>
                 <div className="flex flex-col lg:flex-row justify-between mt-16">
                     <p>🇨🇭 Deutsch</p>
+                    <small className="text-xs my-auto ml-5">
+                        ©
+                        {new Date().toLocaleDateString('en-us', {
+                            year: 'numeric',
+                        })}
+                        {` `}
+                        Codelance GmbH. All rights reserved.
+                    </small>
                     <div className="m-auto lg:mr-0">
-                        <FooterLink href="/" name="Home" />
-                        <FooterLink href="/services" name="Services" />
-                        <FooterLink href="/team" name="Team" />
-                        <FooterLink href="/impressum" name="Impressum" />
-                        <FooterLink href="/datenschutz" name="Datenschutz" />
+                        <FooterLink href="/" name={t('nav_1')} />
+                        <FooterLink href="/services" name={t('nav_2')} />
+                        <FooterLink href="/team" name={t('nav_3')} />
+                        <FooterLink href="/impressum" name={t('nav_4')} />
+                        <FooterLink href="/datenschutz" name={t('nav_5')} />
                     </div>
                 </div>
             </div>

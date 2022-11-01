@@ -1,3 +1,4 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Image from 'next/image';
 
 export default function Team() {
@@ -41,3 +42,9 @@ const TeamMember = ({ name, role, image, description }: TeamMemberProps) => {
         </div>
     );
 };
+
+export const getServerSideProps = async ({ locale }: { locale: string }) => ({
+    props: {
+        ...(await serverSideTranslations(locale, ['common', 'home', 'testimonials'])),
+    },
+});

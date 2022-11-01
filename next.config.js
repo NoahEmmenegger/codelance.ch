@@ -10,6 +10,15 @@ const nextConfig = {
         // a non-locale prefixed path e.g. `/hello`
         defaultLocale: 'en-US',
     },
+    async redirects() {
+        return [
+            {
+                source: '/_404',
+                destination: '/notFound',
+                permanent: true,
+            },
+        ];
+    },
 };
 
 module.exports = nextConfig;

@@ -1,9 +1,11 @@
 {
-    "metaDescription": "Codelance GmbH ist ein Softwareentwicklungsunternehmen mit Sitz in Baar, Schweiz. Wir entwickeln Webanwendungen und mobile Apps für Startups und Unternehmen. Wir sind Experten in React, React Native, Node.js und Next.js. Wir bieten auch Beratungsdienstleistungen für Startups und Unternehmen an. Wenn Sie auf der Suche nach einem Softwareentwicklungsunternehmen sind, sind Sie bei uns genau richtig.",
-    "metaKeywords": "Softwareentwicklungsunternehmen, Softwareentwicklung, Softwareentwicklungsdienste, Softwareentwicklungsagentur, Softwareentwicklungsfirma, Softwareentwicklungsunternehmen, Softwareentwicklungsoutsourcing, Softwareentwicklung, Webentwicklung, Mobile App Entwicklung, React, React Native, Node.js, Next.js, Startups, Beratung, Baar, Schweiz",
-    "slogan_1": "Setzen Sie",
-    "slogan_2": "Ihr IT-Projekt",
-    "slogan_3": "um.",
-    "quote": "Sei es ein Webauftritt, eine Kunden-App oder haben Sie gar eine konkrete Idee für ein Online-Produkt, sind wir da, um Sie zu unterstützen. Vereinbaren Sie gerne einen Termin mit uns. Wir finden garantiert die beste Lösung für Sie.",
-    "noah_quote": "Wir sind ein junges, dynamisches Team, das sich auf die Umsetzung von IT-Projekten spezialisiert hat. Wir sind Ihr Partner für die Umsetzung von IT-Projekten und die Optimierung Ihrer IT-Infrastruktur. Realisieren Sie Ihre IT-Projekte mit uns und profitieren Sie von unserer langjährigen Erfahrung und unserem Know-how. Wir unterstützen Sie bei der Umsetzung Ihrer IT-Projekte und begleiten Sie von der Planung bis zur Realisierung. Wir sind Ihr Partner für die Umsetzung Ihrer IT-Projekte. Sie haben eine Idee? Wir machen sie real."
+    "nav_1": "Startseite",
+    "nav_2": "Dienstleistungen",
+    "nav_3": "Team",
+    "nav_4": "Impressum",
+    "nav_5": "Datenschutz",
+    "contact_us": "Kontaktieren Sie uns",
+    "page_not_found": "Seite nicht gefunden",
+    "go_home": "Zurück zur Startseite",
+    "footerText": "Wir sind ein motiviertes Schweizer Entwicklerteam, das Ihnen gerne hilft, Ihr Traum-IT-Projekt zu realisieren. Denken Sie nie, dass ein Projekt unmöglich wäre. Wir freuen uns, mit Ihnen in Kontakt zu treten und Ihre Projektidee zu besprechen."
 }
