@@ -44,7 +44,7 @@ const WordsAnimation: FC<Props> = ({ text, delay = 0, duration = 0.2, replay, ..
 
     return (
         <motion.h1
-            className="text-center lg:text-left"
+            className="text-center lg:text-left whitespace-nowrap"
             style={{}}
             variants={container}
             initial="hidden"

@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import Image from 'next/image';
 import WordsAnimation from '../components/animations/WordsAnimation';
@@ -13,15 +15,19 @@ import Wave2 from '../components/common/svg/Wave2';
 import Testimonials from '../components/index/Testimonials';
 
 const Home: NextPage = () => {
+    const { t } = useTranslation('common');
+
     return (
         <>
             <Head>
                 <title>Codelance GmbH</title>
                 <meta
                     name="description"
-                    content="Whether it's a website, a customer app or you even have a specific idea for an
-                                online product, we'll be happy to advise you. Simply make an appointment with us.
-                                We will find the best solution for you."
+                    content="Codelance GmbH is a software development company based in Baar, Switzerland. We develop web applications and mobile apps for startups and enterprises. We are experts in React, React Native, Node.js, and Next.js. We also provide consulting services for startups and enterprises. If you are looking for a software development company, you are in the right place."
+                />
+                <meta
+                    name="keywords"
+                    content="software development, web development, mobile development, react, react native, node.js, next.js, consulting"
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -29,9 +35,9 @@ const Home: NextPage = () => {
             <main>
                 <div className="flex flex-col lg:flex-row">
                     <div className="pt-10 h-1/2 lg:p-28 lg:w-2/3 2xl:w-1/3 ">
-                        <WordsAnimation text="Turn your" replay={true} delay={1} />
-                        <WordsAnimation text="IT idea into" replay={true} delay={1.4} />
-                        <WordsAnimation text="reality." replay={true} delay={2.4} />
+                        <WordsAnimation text={t('slogan_1')} replay={true} delay={1} />
+                        <WordsAnimation text={t('slogan_2')} replay={true} delay={1.4} />
+                        <WordsAnimation text={t('slogan_3')} replay={true} delay={2.4} />
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -86,10 +92,14 @@ const Home: NextPage = () => {
                         <div className="pt-10 lg:p-0 lg:w-1/2 m-auto">
                             <h2 className="text-center lg:text-left">Noah Emmenegger</h2>
                             <Quote classname="hidden lg:flex lg:pt-5">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor
-                                sit amet, consectetur adipiscing elit veniam Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit veniam Lorem ipsum dolor sit amet
+                                Realize your IT projects with us and benefit from our many years of experience and
+                                know-how. We support you in the implementation of your IT projects and accompany you
+                                from planning to realization. We are your partner for the implementation of your IT
+                                projects. You have an idea? We make it real.
+                                {/* Realisieren Sie Ihre IT-Projekte mit uns und profitieren Sie von unserer langjährigen
+                                Erfahrung und unserem Know-how. Wir unterstützen Sie bei der Umsetzung Ihrer IT-Projekte
+                                und begleiten Sie von der Planung bis zur Realisierung. Wir sind Ihr Partner für die
+                                Umsetzung Ihrer IT-Projekte. Sie haben eine Idee? Wir machen sie real. */}
                             </Quote>
                             <div className="pt-10 px-10 text-center lg:hidden">
                                 I look forward to getting to know you in a personal meeting!
@@ -101,5 +111,11 @@ const Home: NextPage = () => {
         </>
     );
 };
+
+export const getServerSideProps = async ({ locale }: { locale: string }) => ({
+    props: {
+        ...(await serverSideTranslations(locale, ['common'])),
+    },
+});
 
 export default Home;
