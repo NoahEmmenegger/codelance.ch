@@ -6,7 +6,7 @@ export default function Services() {
     const { t } = useTranslation('services');
     return (
         <div className="m-10">
-            <h1 className="text-4xl font-bold text-center">Our Services</h1>
+            <h1 className="text-4xl font-bold text-center">{t('title')}</h1>
             <div className="flex flex-col lg:flex-row justify-center items-center mt-10 lg:flex-wrap">
                 <Service
                     name={t('service_1_name')}
