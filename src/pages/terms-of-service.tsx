@@ -2,12 +2,12 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function TermsOfService() {
     return (
-        <div>
-            <h1>TERMS OF SERVICE</h1>
+        <div className="p-10 lg:px-52">
+            <h1 className="my-10 text-5xl">TERMS OF SERVICE</h1>
 
             <p>Last updated November 11, 2022</p>
 
-            <h2>TABLE OF CONTENTS</h2>
+            <h2 className="my-5 text-3xl">TABLE OF CONTENTS</h2>
 
             <p>1. AGREEMENT TO TERMS</p>
             <p>2. INTELLECTUAL PROPERTY RIGHTS</p>
@@ -33,7 +33,7 @@ export default function TermsOfService() {
             <p>22. MISCELLANEOUS</p>
             <p>23. CONTACT US</p>
 
-            <div>1. AGREEMENT TO TERMS</div>
+            <h2 className="my-5 text-3xl">1. AGREEMENT TO TERMS</h2>
 
             <div>
                 <p>
@@ -76,9 +76,9 @@ export default function TermsOfService() {
                 </p>
             </div>
 
-            <h2>2. INTELLECTUAL PROPERTY RIGHTS</h2>
+            <h2 className="my-5 text-3xl">2. INTELLECTUAL PROPERTY RIGHTS</h2>
 
-            <p>
+            <div>
                 <p>
                     Unless otherwise indicated, the Site is our proprietary property and all source code, databases,
                     functionality, software, website designs, audio, video, text, photographs, and graphics on the Site
@@ -99,11 +99,11 @@ export default function TermsOfService() {
                     gained access solely for your personal, non-commercial use. We reserve all rights not expressly
                     granted to you in and to the Site, the Content and the Marks.
                 </p>
-            </p>
+            </div>
 
-            <h2>3. USER REPRESENTATIONS</h2>
+            <h2 className="my-5 text-3xl">3. USER REPRESENTATIONS</h2>
 
-            <p>
+            <div>
                 <p>
                     By using the Site, you represent and warrant that: (1) you have the legal capacity and you agree to
                     comply with these Terms of Use; (2) you are not a minor in the jurisdiction in which you reside, or
@@ -118,9 +118,9 @@ export default function TermsOfService() {
                     right to suspend or terminate your account and refuse any and all current or future use of the Site
                     (or any portion thereof).
                 </p>
-            </p>
+            </div>
 
-            <h2>4. PROHIBITED ACTIVITIES</h2>
+            <h2 className="my-5 text-3xl">4. PROHIBITED ACTIVITIES</h2>
 
             <p>
                 You may not access or use the Site for any purpose other than that for which we make the Site available.
@@ -203,7 +203,7 @@ export default function TermsOfService() {
                 any revenue-generating endeavor or commercial enterprise.
             </ul>
 
-            <h2>5. USER GENERATED CONTRIBUTIONS</h2>
+            <h2 className="my-5 text-3xl">5. USER GENERATED CONTRIBUTIONS</h2>
 
             <p>
                 The Site does not offer users to submit or post content. We may provide you with the opportunity to
@@ -265,7 +265,7 @@ export default function TermsOfService() {
                 other things, termination or suspension of your rights to use the Site.
             </ul>
 
-            <h2>6. CONTRIBUTION LICENSE</h2>
+            <h2 className="my-5 text-3xl">6. CONTRIBUTION LICENSE</h2>
 
             <p>
                 You agree that we may access, store, process, and use any information and personal data that you provide
@@ -286,7 +286,7 @@ export default function TermsOfService() {
                 against us regarding your Contributions.
             </p>
 
-            <h2>7. MOBILE APPLICATION LICENSE</h2>
+            <h2 className="my-5 text-3xl">7. MOBILE APPLICATION LICENSE</h2>
 
             <b>Use License</b>
 
@@ -340,7 +340,7 @@ export default function TermsOfService() {
                 third-party beneficiary thereof.
             </p>
 
-            <h2>8. SUBMISSIONS</h2>
+            <h2 className="my-5 text-3xl">8. SUBMISSIONS</h2>
 
             <p>
                 You acknowledge and agree that any questions, comments, suggestions, ideas, feedback, or other
@@ -354,7 +354,7 @@ export default function TermsOfService() {
                 Submissions.
             </p>
 
-            <h2>9. THIRD-PARTY WEBSITE AND CONTENT</h2>
+            <h2 className="my-5 text-3xl">9. THIRD-PARTY WEBSITE AND CONTENT</h2>
 
             <p>
                 The Site may contain (or you may be sent via the Site) links to other websites (&quot;Third-Party
@@ -380,7 +380,7 @@ export default function TermsOfService() {
                 or any contact with Third-Party Websites.
             </p>
 
-            <h2>10. SITE MANAGEMENT</h2>
+            <h2 className="my-5 text-3xl">10. SITE MANAGEMENT</h2>
 
             <p>
                 We reserve the right, but not the obligation, to: (1) monitor the Site for violations of these Terms of
@@ -394,7 +394,7 @@ export default function TermsOfService() {
                 property and to facilitate the proper functioning of the Site.
             </p>
 
-            <h2>11. PRIVACY POLICY</h2>
+            <h2 className="my-5 text-3xl">11. PRIVACY POLICY</h2>
 
             <p>
                 We care about data privacy and security. Please review our Privacy Policy:
@@ -406,7 +406,7 @@ export default function TermsOfService() {
                 have your data transferred to and processed in Switzerland.
             </p>
 
-            <h2>12. TERM AND TERMINATION</h2>
+            <h2 className="my-5 text-3xl">12. TERM AND TERMINATION</h2>
 
             <p>
                 These Terms of Use shall remain in full force and effect while you use the Site. WITHOUT LIMITING ANY
@@ -426,7 +426,7 @@ export default function TermsOfService() {
                 criminal, and injunctive redress.
             </p>
 
-            <h2>13. MODIFICATIONS AND INTERRUPTIONS</h2>
+            <h2 className="my-5 text-3xl">13. MODIFICATIONS AND INTERRUPTIONS</h2>
 
             <p>
                 We reserve the right to change, modify, or remove the contents of the Site at any time or for any reason
@@ -447,7 +447,7 @@ export default function TermsOfService() {
                 therewith.
             </p>
 
-            <h2>14. GOVERNING LAW</h2>
+            <h2 className="my-5 text-3xl">14. GOVERNING LAW</h2>
 
             <p>
                 These conditions are governed by and interpreted following the laws of Switzerland, and the use of the
@@ -459,7 +459,7 @@ export default function TermsOfService() {
                 Use in Switzerland, or in the EU country in which you reside.
             </p>
 
-            <h2>15. DISPUTE RESOLUTION</h2>
+            <h2 className="my-5 text-3xl">15. DISPUTE RESOLUTION</h2>
 
             <p>
                 The European Commission provides an online dispute resolution platform, which you can access here:
@@ -467,7 +467,7 @@ export default function TermsOfService() {
                 contact us.
             </p>
 
-            <h2>16. CORRECTIONS</h2>
+            <h2 className="my-5 text-3xl">16. CORRECTIONS</h2>
 
             <p>
                 There may be information on the Site that contains typographical errors, inaccuracies, or omissions,
@@ -476,7 +476,7 @@ export default function TermsOfService() {
                 any time, without prior notice.
             </p>
 
-            <h2>17. DISCLAIMER</h2>
+            <h2 className="my-5 text-3xl">17. DISCLAIMER</h2>
 
             <p>
                 THE SITE IS PROVIDED ON AN AS-IS AND AS-AVAILABLE BASIS. YOU AGREE THAT YOUR USE OF THE SITE AND OUR
@@ -500,7 +500,7 @@ export default function TermsOfService() {
                 BEST JUDGMENT AND EXERCISE CAUTION WHERE APPROPRIATE.
             </p>
 
-            <h2>18. LIMITATIONS OF LIABILITY</h2>
+            <h2 className="my-5 text-3xl">18. LIMITATIONS OF LIABILITY</h2>
 
             <p>
                 IN NO EVENT WILL WE OR OUR DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY
@@ -509,7 +509,7 @@ export default function TermsOfService() {
                 BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
             </p>
 
-            <h2>19. INDEMNIFICATION</h2>
+            <h2 className="my-5 text-3xl">19. INDEMNIFICATION</h2>
 
             <p>
                 You agree to defend, indemnify, and hold us harmless, including our subsidiaries, affiliates, and all of
@@ -525,7 +525,7 @@ export default function TermsOfService() {
                 is subject to this indemnification upon becoming aware of it.
             </p>
 
-            <h2>20. USER DATA</h2>
+            <h2 className="my-5 text-3xl">20. USER DATA</h2>
 
             <p>
                 We will maintain certain data that you transmit to the Site for the purpose of managing the performance
@@ -536,7 +536,7 @@ export default function TermsOfService() {
                 any such loss or corruption of such data.
             </p>
 
-            <h2>21. ELECTRONIC COMMUNICATIONS, TRANSACTIONS, AND SIGNATURES</h2>
+            <h2 className="my-5 text-3xl">21. ELECTRONIC COMMUNICATIONS, TRANSACTIONS, AND SIGNATURES</h2>
 
             <p>
                 Visiting the Site, sending us emails, and completing online forms constitute electronic communications.
@@ -550,7 +550,7 @@ export default function TermsOfService() {
                 to payments or the granting of credits by any means other than electronic means.
             </p>
 
-            <h2>22. MISCELLANEOUS</h2>
+            <h2 className="my-5 text-3xl">22. MISCELLANEOUS</h2>
 
             <p>
                 These Terms of Use and any policies or operating rules posted by us on the Site or in respect to the
@@ -568,7 +568,7 @@ export default function TermsOfService() {
                 Use and the lack of signing by the parties hereto to execute these Terms of Use.
             </p>
 
-            <h2>23. CONTACT US</h2>
+            <h2 className="my-5 text-3xl">23. CONTACT US</h2>
 
             <p>
                 In order to resolve a complaint regarding the Site or to receive further information regarding use of

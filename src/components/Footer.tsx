@@ -44,8 +44,8 @@ export default function Footer() {
                         <FooterLink href="/" name={t('nav_1')} />
                         <FooterLink href="/services" name={t('nav_2')} />
                         <FooterLink href="/team" name={t('nav_3')} />
-                        <FooterLink href="/impressum" name={t('nav_4')} />
-                        <FooterLink href="/datenschutz" name={t('nav_5')} />
+                        <FooterLink href="/terms-of-service" name={t('nav_4')} />
+                        <FooterLink href="/privacy-policy" name={t('nav_5')} />
                     </div>
                 </div>
             </div>
