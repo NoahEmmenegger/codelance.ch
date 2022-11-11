@@ -29,7 +29,7 @@ const Home: NextPage = () => {
 
             <main>
                 <div className="flex flex-col lg:flex-row">
-                    <div className="pt-10 h-1/2 lg:p-28 lg:w-2/3 2xl:w-1/3 ">
+                    <div className="pt-5 lg:pt-10 h-1/2 lg:p-28 lg:w-2/3 2xl:w-1/3 ">
                         <WordsAnimation text={t('slogan_1')} replay={true} delay={0.5} />
                         <WordsAnimation text={t('slogan_2')} replay={true} delay={0.9} />
                         <WordsAnimation text={t('slogan_3')} replay={true} delay={2} />
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
                             transition={{ delay: 3, duration: 0.5 }}
                         >
                             <Quote classname="py-10 hidden lg:flex">{t('quote')}</Quote>
-                            <div className="pt-10 px-10 text-center lg:hidden">{t('quote')}</div>
+                            <div className="pt-5 lg:pt-10 px-10 text-center lg:hidden">{t('quote')}</div>
                             <Link href="/services">
                                 <Button className="m-auto ml-auto mr-auto mt-5 mb-20 lg:m-0" text={t('learn_more')}>
                                     <div className="absolute h-auto w-52 -right-64 -top-14 cursor-default">

@@ -5,17 +5,17 @@ export default function Testimonials() {
 
     return (
         <div className="flex flex-col items-center justify-center bg-secondary">
-            <div className="flex flex-row items-center justify-center lg:mx-44">
-                <Testimonial name="Max Mustermann" position="CEO at Company">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam
+            <h2 className="mt-10 mb-3 text-4xl">Testimonials</h2>
+            <h3>What our customers say</h3>
+            <div className="flex flex-row lg:mx-44">
+                <Testimonial name="Unknown" position={t('1_position')}>
+                    {t('1_quote', { ns: 'testimonials' })}
                 </Testimonial>
                 <Testimonial name="Unknown" position={t('1_position')}>
                     {t('1_quote', { ns: 'testimonials' })}
                 </Testimonial>
-                <Testimonial name="Max Mustermann" position="CEO at Company">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam
+                <Testimonial name="Unknown" position={t('1_position')}>
+                    {t('1_quote', { ns: 'testimonials' })}
                 </Testimonial>
             </div>
         </div>
@@ -31,7 +31,7 @@ type TestimonialProps = {
 const Testimonial = ({ children, name, position }: TestimonialProps) => {
     return (
         <div className="w-screen p-10 lg:w-full">
-            <div className="lg:w-full bg-accent p-10 rounded-2xl">
+            <div className="lg:w-full h-full bg-accent p-10 rounded-2xl">
                 <b>{name}</b>
                 <p>{position}</p>
                 <br />
