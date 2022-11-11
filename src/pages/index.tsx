@@ -28,8 +28,8 @@ const Home: NextPage = () => {
             </Head>
 
             <main>
-                <div className="flex flex-col lg:flex-row">
-                    <div className="pt-5 lg:pt-10 h-1/2 lg:p-28 lg:w-2/3 2xl:w-1/3 ">
+                <div className="flex flex-col lg:flex-row lg:h-[75vh]">
+                    <div className="pt-5 lg:pt-10 lg:p-28 lg:w-2/3 2xl:w-1/3 lg:my-auto">
                         <WordsAnimation text={t('slogan_1')} replay={true} delay={0.5} />
                         <WordsAnimation text={t('slogan_2')} replay={true} delay={0.9} />
                         <WordsAnimation text={t('slogan_3')} replay={true} delay={2} />
