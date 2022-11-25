@@ -1,6 +1,14 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useState } from 'react';
+import Button from '../components/common/Button';
+import TextInput from '../components/common/TextInput';
 
 export default function Contact() {
+    const [contactForm, setContactForm] = useState({
+        lastName: '',
+        email: '',
+        message: '',
+    });
     return (
         <div className="p-10">
             <div>
@@ -9,13 +17,28 @@ export default function Contact() {
             </div>
             <div>
                 <form className="flex flex-col">
-                    <label htmlFor="name">Name</label>
-                    <input type="text" id="name" name="name" />
-                    <label htmlFor="email">Email</label>
-                    <input type="email" id="email" name="email" />
-                    <label htmlFor="message">Message</label>
-                    <textarea id="message" name="message" />
-                    <button type="submit">Send</button>
+                    <TextInput
+                        validations={['REQUIRED']}
+                        id="lastName"
+                        label="Last Name"
+                        value={contactForm}
+                        onChange={setContactForm}
+                    />
+                    <TextInput
+                        validations={['REQUIRED', 'EMAIL']}
+                        id="email"
+                        label="Email"
+                        value={contactForm}
+                        onChange={setContactForm}
+                    />
+                    <TextInput
+                        validations={['REQUIRED']}
+                        id="message"
+                        label="Message"
+                        value={contactForm}
+                        onChange={setContactForm}
+                    />
+                    <Button className="m-auto" text="Send" />
                 </form>
             </div>
         </div>

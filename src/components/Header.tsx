@@ -51,7 +51,11 @@ export default function Header() {
                     <HeaderLink href="/team" name={t('nav_3')} />
                 </div>
                 <div className="hidden lg:flex w-1/3 m-auto ml-auto justify-end">
-                    <Button text={t('contact_us')} />
+                    <Link href="/contact">
+                        <a>
+                            <Button text={t('contact_us')} />
+                        </a>
+                    </Link>
                 </div>
                 <div onClick={() => setIsMenuOpen(true)} className="w-10 lg:hidden">
                     <HamburgerSVG />
