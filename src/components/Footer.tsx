@@ -1,6 +1,7 @@
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import Link from 'next/link';
+import LanguageSwitcher from './common/LanguageSwitcher';
 import FooterWave from './common/svg/FooterWave';
 
 export default function Footer() {
@@ -30,22 +31,25 @@ export default function Footer() {
                         <p>{t('footerText')}</p>
                     </TextBlock>
                 </div>
-                <div className="flex flex-col lg:flex-row justify-between mt-16">
-                    <p>🇨🇭 Deutsch</p>
-                    <small className="text-xs my-auto ml-5">
-                        ©
-                        {new Date().toLocaleDateString('en-us', {
-                            year: 'numeric',
-                        })}
-                        {` `}
-                        Codelance GmbH. All rights reserved.
-                    </small>
-                    <div className="m-auto lg:mr-0">
+
+                <div className="lg:hidden">
+                    <LanguageSwitcher />
+                </div>
+
+                <div className="flex flex-col justify-between mt-10 lg:flex-row-reverse">
+                    <div className="flex flex-wrap">
                         <FooterLink href="/" name={t('nav_1')} />
                         <FooterLink href="/services" name={t('nav_2')} />
                         <FooterLink href="/team" name={t('nav_3')} />
                         <FooterLink href="/terms-of-service" name={t('nav_4')} />
                         <FooterLink href="/privacy-policy" name={t('nav_5')} />
+                    </div>
+                    <div className="hidden my-auto lg:flex">
+                        <LanguageSwitcher />
+                        <CopyRight />
+                    </div>
+                    <div className="mt-10 lg:hidden">
+                        <CopyRight />
                     </div>
                 </div>
             </div>
@@ -55,10 +59,21 @@ export default function Footer() {
 
 const FooterLink = ({ href, name }: { href: string; name: string }) => (
     <Link href={href}>
-        <a className="text-primary font-semibold text-xs ml-2 lg:text-xl lg:ml-5">{name}</a>
+        <a className="text-primary mx-auto my-1 font-semibold lg:text-xl lg:ml-5">{name}</a>
     </Link>
 );
 
 const TextBlock = ({ children }: { children: React.ReactNode }) => (
     <div className="mr-10 py-5 lg:w-1/2">{children}</div>
+);
+
+const CopyRight = () => (
+    <small className="text-xs my-auto ml-5">
+        ©
+        {new Date().toLocaleDateString('en-us', {
+            year: 'numeric',
+        })}
+        {` `}
+        Codelance GmbH. All rights reserved.
+    </small>
 );
