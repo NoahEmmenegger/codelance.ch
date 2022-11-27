@@ -16,12 +16,12 @@ export default function LanguageSwitcher() {
         <div className="relative">
             <div className="cursor-pointer flex" onClick={() => setIsOpen(!isOpen)}>
                 {convertLanguageToEmoji(activeLocale)}
-                <div className="m-auto ml-2 lg:ml-10">
-                    <Triangle />
+                <div className="m-auto ml-2">
+                    <Triangle isUp={isOpen} />
                 </div>
             </div>
             {isOpen && (
-                <div className="absolute max-h-80 w-full bg-white bottom-full right-0 border rounded-md text-black">
+                <div className="absolute w-full bg-white bottom-full right-0 rounded-md text-black">
                     {otherLocales &&
                         otherLocales.map((locale) => {
                             const { pathname, query, asPath } = router;
@@ -30,7 +30,7 @@ export default function LanguageSwitcher() {
                                 <Link key={locale} href={{ pathname, query }} as={asPath} locale={locale}>
                                     <a>
                                         <div
-                                            className="cursor-pointer hover:bg-primaryDark p-5 "
+                                            className="cursor-pointer hover:bg-primaryDark p-2 "
                                             onClick={() => {
                                                 setIsOpen(false);
                                             }}

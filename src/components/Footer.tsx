@@ -46,9 +46,11 @@ export default function Footer() {
                     </div>
                     <div className="hidden my-auto lg:flex">
                         <LanguageSwitcher />
-                        <CopyRight />
+                        <div className="ml-5">
+                            <CopyRight />
+                        </div>
                     </div>
-                    <div className="mt-10 lg:hidden">
+                    <div className="mt-10 justify-center flex lg:hidden ">
                         <CopyRight />
                     </div>
                 </div>
@@ -68,7 +70,7 @@ const TextBlock = ({ children }: { children: React.ReactNode }) => (
 );
 
 const CopyRight = () => (
-    <small className="text-xs my-auto ml-5">
+    <small className="text-xs my-auto m-auto">
         ©
         {new Date().toLocaleDateString('en-us', {
             year: 'numeric',
