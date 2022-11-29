@@ -16,7 +16,7 @@ export default function validate(value: string, validators: Validator[] = []): s
                 }
                 break;
             case 'EMAIL':
-                if (value.matchAll(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+                if (!value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
                     errors.push('validation_error_email');
                 }
             default:

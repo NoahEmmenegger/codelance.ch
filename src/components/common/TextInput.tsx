@@ -1,5 +1,5 @@
 import { useTranslation } from 'next-i18next';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Validator } from '../../types/Validation';
 import validate from '../../utils/validation';
 
@@ -8,13 +8,21 @@ type TextInputProps = {
     label: string;
     value: any;
     type?: 'text' | 'email' | 'password';
+    onError?: (error: boolean) => void;
     onChange: (value: any) => void;
     validations: Validator[];
 };
 
-export default function TextInput({ id, label, value, type = 'text', onChange, validations }: TextInputProps) {
+export default function TextInput({ id, label, value, type = 'text', onChange, onError, validations }: TextInputProps) {
     const { t } = useTranslation('common');
     const [errorMessage, setErrorMessage] = useState('');
+
+    useEffect(() => {
+        if (onError) {
+            onError(errorMessage !== '');
+        }
+    }, [errorMessage]);
+
     return (
         <div>
             <label htmlFor={id}>{label}</label>

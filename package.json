@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.12",
+    "axios": "^1.2.0",
     "framer-motion": "^7.6.1",
     "i18next": "^22.0.4",
     "i18next-browser-languagedetector": "^7.0.0",
