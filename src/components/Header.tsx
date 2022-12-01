@@ -71,7 +71,7 @@ export default function Header() {
                             <HeaderLink href="/" name="Home" />
                             <HeaderLink href="/services" name="Services" />
                             <HeaderLink href="/team" name="Team" />
-                            <HeaderLink href="/" name="contact us" />
+                            <HeaderLink href="/contact" name="contact us" />
                         </div>
                     </div>
                 )}
