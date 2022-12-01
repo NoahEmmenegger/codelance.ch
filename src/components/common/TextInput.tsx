@@ -19,7 +19,7 @@ export default function TextInput({ id, label, value, type = 'text', onChange, o
 
     useEffect(() => {
         if (onError) {
-            onError(errorMessage !== '');
+            onError(errorMessage == undefined);
         }
     }, [errorMessage]);
 

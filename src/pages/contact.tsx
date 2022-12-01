@@ -10,7 +10,7 @@ export default function Contact() {
         email: '',
         message: '',
     });
-    const [errors, setErrors] = useState<boolean[]>([]);
+    const [errors, setErrors] = useState<boolean[]>([false, false, false]);
 
     console.log(errors);
 
@@ -28,7 +28,11 @@ export default function Contact() {
                         label="Last Name"
                         value={contactForm}
                         onChange={setContactForm}
-                        onError={(error) => setErrors([...errors, (errors[0] = error)])}
+                        onError={(error) => {
+                            const newErrors = [...errors];
+                            newErrors[0] = error;
+                            setErrors(newErrors);
+                        }}
                     />
                     <TextInput
                         validations={['REQUIRED', 'EMAIL']}
@@ -36,7 +40,11 @@ export default function Contact() {
                         label="Email"
                         value={contactForm}
                         onChange={setContactForm}
-                        onError={(error) => setErrors([...errors, (errors[1] = error)])}
+                        onError={(error) => {
+                            const newErrors = [...errors];
+                            newErrors[1] = error;
+                            setErrors(newErrors);
+                        }}
                     />
                     <TextInput
                         validations={['REQUIRED']}
@@ -44,10 +52,14 @@ export default function Contact() {
                         label="Message"
                         value={contactForm}
                         onChange={setContactForm}
-                        onError={(error) => setErrors([...errors, (errors[2] = error)])}
+                        onError={(error) => {
+                            const newErrors = [...errors];
+                            newErrors[2] = error;
+                            setErrors(newErrors);
+                        }}
                     />
                     <Button
-                        disabled={!!errors.find((error: boolean) => error !== true)}
+                        disabled={errors.filter((error: boolean) => error === false).length > 0}
                         onClick={() => axios.post('/api/contact', contactForm)}
                         className="m-auto"
                         text="Send"
