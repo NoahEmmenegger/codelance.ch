@@ -2,6 +2,7 @@ import axios from 'axios';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useState } from 'react';
 import Button from '../components/common/Button';
+import HappySVG from '../components/common/svg/Happy';
 import TextInput from '../components/common/TextInput';
 
 export default function Contact() {
@@ -15,12 +16,15 @@ export default function Contact() {
     return (
         <div className="p-10">
             <div>
-                <h1>Contact</h1>
-                <p>If you want to contact us you can fill out the following form:</p>
+                <h1 className="text-4xl font-bold text-center">Contact</h1>
+                <p className="text-center">If you want to contact us you can fill out the following form:</p>
             </div>
-            <div>
-                <div className="flex flex-col">
+            <div className="flex lg:w-8/12 lg:m-auto">
+                <HappySVG className="hidden lg:block p-36" />
+                <div className="flex flex-col lg:w-1/2 lg:m-10 p-5 lg:rounded-xl">
+                    <h2 className="text-lg m-auto">Contact us</h2>
                     <TextInput
+                        placeholder="Jason Warner"
                         validations={['REQUIRED']}
                         id="name"
                         label="Name"
@@ -33,6 +37,7 @@ export default function Contact() {
                         }}
                     />
                     <TextInput
+                        placeholder="jason@gmail.com"
                         validations={['REQUIRED', 'EMAIL']}
                         id="email"
                         label="Email"
@@ -45,9 +50,11 @@ export default function Contact() {
                         }}
                     />
                     <TextInput
+                        placeholder="Write your message here..."
                         validations={['REQUIRED']}
                         id="message"
                         label="Message"
+                        type="text"
                         value={contactForm}
                         onChange={setContactForm}
                         onError={(error) => {
@@ -59,9 +66,10 @@ export default function Contact() {
                     <Button
                         disabled={errors.filter((error: boolean) => error === false).length > 0}
                         onClick={() => axios.post('/api/contact', contactForm)}
-                        className="m-auto"
-                        text="Send"
+                        className="m-auto my-5"
+                        text="Send Message"
                     />
+                    <small className="text-xs  m-auto">Response time: 48 hours</small>
                 </div>
             </div>
         </div>

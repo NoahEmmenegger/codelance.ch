@@ -6,6 +6,7 @@ import validate from '../../utils/validation';
 type TextInputProps = {
     id: string;
     label: string;
+    placeholder?: string;
     value: any;
     type?: 'text' | 'email' | 'password';
     onError?: (error: boolean) => void;
@@ -13,7 +14,16 @@ type TextInputProps = {
     validations: Validator[];
 };
 
-export default function TextInput({ id, label, value, type = 'text', onChange, onError, validations }: TextInputProps) {
+export default function TextInput({
+    id,
+    label,
+    value,
+    placeholder = '',
+    type = 'text',
+    onChange,
+    onError,
+    validations,
+}: TextInputProps) {
     const { t } = useTranslation('common');
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -25,8 +35,12 @@ export default function TextInput({ id, label, value, type = 'text', onChange, o
 
     return (
         <div>
-            <label htmlFor={id}>{label}</label>
+            <label className="" htmlFor={id}>
+                {label}
+            </label>
             <input
+                placeholder={placeholder}
+                className="border border-gray-300 rounded-md p-2 w-full"
                 value={value[id]}
                 onChange={(event) => {
                     const newVal = event.target.value;
