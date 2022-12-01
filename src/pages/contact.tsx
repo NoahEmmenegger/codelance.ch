@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useState } from 'react';
+import { toast } from 'react-hot-toast';
 import Button from '../components/common/Button';
 import HappySVG from '../components/common/svg/Happy';
 import TextArea from '../components/common/TextArea';
@@ -56,7 +57,28 @@ export default function Contact() {
                     />
                     <Button
                         disabled={!hasNameError || !hasEmailError || !hasMessageError}
-                        onClick={() => axios.post('/api/contact', contactForm)}
+                        onClick={() => {
+                            toast.promise(
+                                axios.post('/api/contact', contactForm).then(() => {
+                                    setContactForm({
+                                        name: '',
+                                        email: '',
+                                        message: '',
+                                    });
+                                    setHasNameError(true);
+                                    setHasEmailError(true);
+                                    setHasMessageError(true);
+                                }),
+                                {
+                                    loading: 'Sending...',
+                                    success: 'Message sent!',
+                                    error: 'Error sending message',
+                                },
+                                {
+                                    duration: 3000,
+                                }
+                            );
+                        }}
                         className="m-auto my-5"
                         text="Send Message"
                     />
