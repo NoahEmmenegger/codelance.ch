@@ -10,8 +10,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
         title: 'New contact form submission!',
         fields: [
             {
-                name: 'Last name',
-                value: req.body.lastName || 'N/A',
+                name: 'Name',
+                value: req.body.name || 'N/A',
             },
             {
                 name: 'Email',

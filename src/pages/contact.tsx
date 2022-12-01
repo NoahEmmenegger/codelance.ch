@@ -6,13 +6,11 @@ import TextInput from '../components/common/TextInput';
 
 export default function Contact() {
     const [contactForm, setContactForm] = useState({
-        lastName: '',
+        name: '',
         email: '',
         message: '',
     });
     const [errors, setErrors] = useState<boolean[]>([false, false, false]);
-
-    console.log(errors);
 
     return (
         <div className="p-10">
@@ -24,8 +22,8 @@ export default function Contact() {
                 <div className="flex flex-col">
                     <TextInput
                         validations={['REQUIRED']}
-                        id="lastName"
-                        label="Last Name"
+                        id="name"
+                        label="Name"
                         value={contactForm}
                         onChange={setContactForm}
                         onError={(error) => {
