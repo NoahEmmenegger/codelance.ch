@@ -3,6 +3,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useState } from 'react';
 import Button from '../components/common/Button';
 import HappySVG from '../components/common/svg/Happy';
+import TextArea from '../components/common/TextArea';
 import TextInput from '../components/common/TextInput';
 
 export default function Contact() {
@@ -11,18 +12,20 @@ export default function Contact() {
         email: '',
         message: '',
     });
-    const [errors, setErrors] = useState<boolean[]>([false, false, false]);
+    const [hasNameError, setHasNameError] = useState(true);
+    const [hasEmailError, setHasEmailError] = useState(true);
+    const [hasMessageError, setHasMessageError] = useState(true);
 
     return (
         <div className="p-10">
-            <div>
+            <div className="mb-10">
                 <h1 className="text-4xl font-bold text-center">Contact</h1>
                 <p className="text-center">If you want to contact us you can fill out the following form:</p>
             </div>
             <div className="flex lg:w-8/12 lg:m-auto">
                 <HappySVG className="hidden lg:block p-36" />
-                <div className="flex flex-col lg:w-1/2 lg:m-10 p-5 lg:rounded-xl">
-                    <h2 className="text-lg m-auto">Contact us</h2>
+                <div className="flex flex-col lg:w-2/3 lg:m-10 lg:rounded-xl">
+                    <h2 className="text-lg m-auto">contact form</h2>
                     <TextInput
                         placeholder="Jason Warner"
                         validations={['REQUIRED']}
@@ -30,11 +33,7 @@ export default function Contact() {
                         label="Name"
                         value={contactForm}
                         onChange={setContactForm}
-                        onError={(error) => {
-                            const newErrors = [...errors];
-                            newErrors[0] = error;
-                            setErrors(newErrors);
-                        }}
+                        onError={setHasNameError}
                     />
                     <TextInput
                         placeholder="jason@gmail.com"
@@ -43,13 +42,9 @@ export default function Contact() {
                         label="Email"
                         value={contactForm}
                         onChange={setContactForm}
-                        onError={(error) => {
-                            const newErrors = [...errors];
-                            newErrors[1] = error;
-                            setErrors(newErrors);
-                        }}
+                        onError={setHasEmailError}
                     />
-                    <TextInput
+                    <TextArea
                         placeholder="Write your message here..."
                         validations={['REQUIRED']}
                         id="message"
@@ -57,14 +52,10 @@ export default function Contact() {
                         type="text"
                         value={contactForm}
                         onChange={setContactForm}
-                        onError={(error) => {
-                            const newErrors = [...errors];
-                            newErrors[2] = error;
-                            setErrors(newErrors);
-                        }}
+                        onError={setHasMessageError}
                     />
                     <Button
-                        disabled={errors.filter((error: boolean) => error === false).length > 0}
+                        disabled={!hasNameError || !hasEmailError || !hasMessageError}
                         onClick={() => axios.post('/api/contact', contactForm)}
                         className="m-auto my-5"
                         text="Send Message"

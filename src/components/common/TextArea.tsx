@@ -14,7 +14,7 @@ type TextInputProps = {
     validations: Validator[];
 };
 
-export default function TextInput({
+export default function TextArea({
     id,
     label,
     value,
@@ -35,10 +35,10 @@ export default function TextInput({
 
     return (
         <div className="my-3">
-            <label className="mb-10" htmlFor={id}>
+            <label className="" htmlFor={id}>
                 {label}
             </label>
-            <input
+            <textarea
                 placeholder={placeholder}
                 className="border border-gray-300 rounded-md p-2 w-full mt-2"
                 value={value[id]}
@@ -47,7 +47,7 @@ export default function TextInput({
                     onChange({ ...value, [id]: newVal });
                     setErrorMessage(validate(newVal, validations)[0]);
                 }}
-                type={type}
+                rows={8}
                 id={id}
                 name={id}
             />
