@@ -2,14 +2,18 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from './common/Button';
-import CloseSVG from './common/svg/Close';
 import HamburgerSVG from './common/svg/Hamburger';
+import HappySVG from './common/svg/Happy';
 import Triangle from './common/svg/Triangle';
 
-export default function Header() {
+export default function Header({ onMenuChange }: { onMenuChange: (value: boolean) => void }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    useEffect(() => {
+        onMenuChange(isMenuOpen);
+    }, [isMenuOpen, onMenuChange]);
 
     const { t } = useTranslation('common');
 
@@ -49,21 +53,17 @@ export default function Header() {
                         </a>
                     </Link>
                 </div>
-                <div onClick={() => setIsMenuOpen(true)} className="w-10 lg:hidden">
+                <div onClick={() => setIsMenuOpen(!isMenuOpen)} className="w-10 z-20 lg:hidden">
                     <HamburgerSVG />
                 </div>
                 {isMenuOpen && (
-                    <div className="fixed top-0 left-0 w-full h-full bg-tertiary overflow-hidden z-50 lg:hidden">
-                        <div className="flex justify-end p-5">
-                            <div onClick={() => setIsMenuOpen(false)} className="w-10">
-                                <CloseSVG />
-                            </div>
-                        </div>
-                        <div className="h-full p-10 flex flex-col lg:justify-center lg:items-center">
+                    <div className="fixed top-0 left-0 w-full h-full bg-tertiary overflow-hidden z-10 lg:hidden">
+                        <div className="h-full p-10 pt-20 flex flex-col lg:justify-center lg:items-center">
                             <HeaderLink href="/" name="Home" onClick={() => setIsMenuOpen(false)} />
                             <HeaderLink href="/services" name="Services" onClick={() => setIsMenuOpen(false)} />
                             <HeaderLink href="/team" name="Team" onClick={() => setIsMenuOpen(false)} />
                             <HeaderLink href="/contact" name="Contact us" onClick={() => setIsMenuOpen(false)} />
+                            <HappySVG className="mt-auto" />
                         </div>
                     </div>
                 )}
@@ -76,14 +76,14 @@ function HeaderLink({ href, name, onClick }: { href: string; name: string; onCli
     return (
         <Link href={href}>
             <motion.a
-                className="p-5 font-bold text-2xl flex lg:p-0 lg:ml-10 lg:text-xl select-none"
+                className="p-5 font-bold text-2xl flex lg:font-normal lg:p-0 lg:ml-10 lg:text-xl select-none"
                 whileHover={{ scale: 1.2 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 50 }}
                 onClick={onClick}
             >
                 {name}
 
-                <Triangle className="my-auto ml-3 -rotate-90" />
+                <Triangle className="my-auto ml-3 -rotate-90 lg:hidden" />
             </motion.a>
         </Link>
     );
