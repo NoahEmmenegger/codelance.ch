@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Button from './common/Button';
 import HamburgerSVG from './common/svg/Hamburger';
-import HappySVG from './common/svg/Happy';
 import Triangle from './common/svg/Triangle';
 
 export default function Header({ onMenuChange }: { onMenuChange: (value: boolean) => void }) {
@@ -63,7 +62,6 @@ export default function Header({ onMenuChange }: { onMenuChange: (value: boolean
                             <HeaderLink href="/services" name="Services" onClick={() => setIsMenuOpen(false)} />
                             <HeaderLink href="/team" name="Team" onClick={() => setIsMenuOpen(false)} />
                             <HeaderLink href="/contact" name="Contact us" onClick={() => setIsMenuOpen(false)} />
-                            <HappySVG className="mt-auto" />
                         </div>
                     </div>
                 )}
