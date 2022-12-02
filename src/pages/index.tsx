@@ -31,22 +31,22 @@ const Home: NextPage = () => {
                 <div className="flex flex-col lg:flex-row lg:h-[75vh]">
                     <div className="pt-5 lg:pt-10 lg:p-28 lg:w-2/3 2xl:w-1/3 lg:my-auto">
                         <WordsAnimation text={t('slogan_1')} replay={true} delay={0.5} />
-                        <WordsAnimation text={t('slogan_2')} replay={true} delay={0.9} />
-                        <WordsAnimation text={t('slogan_3')} replay={true} delay={2} />
+                        <WordsAnimation text={t('slogan_2')} replay={true} delay={0.7} />
+                        <WordsAnimation text={t('slogan_3')} replay={true} duration={10} delay={1.5} />
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 3, duration: 0.5 }}
+                            transition={{ delay: 2, duration: 0.5 }}
                         >
                             <Quote classname="py-10 hidden lg:flex">{t('quote')}</Quote>
                             <div className="pt-5 lg:pt-10 px-10 text-center lg:hidden">{t('quote')}</div>
                             <Link href="/services">
                                 <Button className="m-auto ml-auto mr-auto mt-5 mb-20 lg:m-0" text={t('learn_more')}>
                                     <div className="absolute h-auto w-52 -right-64 -top-14 cursor-default">
-                                        <ArrowSVG delay={8} />
+                                        <ArrowSVG delay={6} />
                                     </div>
                                     <div className="absolute h-auto w-52 scale-x-[-1] -rotate-30 -left-52 top-10 cursor-default">
-                                        <ArrowSVG delay={5} />
+                                        <ArrowSVG delay={3} />
                                     </div>
                                 </Button>
                             </Link>

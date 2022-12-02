@@ -1,14 +1,15 @@
 type TriangleProps = {
     isUp?: boolean;
+    className?: string;
 };
 
-const Triangle = ({ isUp = false }: TriangleProps) => (
+const Triangle = ({ isUp = false, className = '' }: TriangleProps) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
         width={12}
         height={8}
         fill="none"
-        className={isUp ? 'rotate-180' : 'rotate-0'}
+        className={(isUp ? 'rotate-180' : 'rotate-0') + ' ' + className}
     >
         <path
             fill="#2F2E41"
