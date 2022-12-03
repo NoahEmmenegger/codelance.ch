@@ -23,8 +23,8 @@ export default function Contact() {
                 <h1 className="text-4xl font-bold text-center">Contact</h1>
                 <p className="text-center">If you want to contact us you can fill out the following form:</p>
             </div>
-            <div className="flex lg:w-8/12 lg:m-auto">
-                <HappySVG className="hidden lg:block p-36" />
+            <div className="flex lg:w-10/12  2xl:w-8/12 lg:m-auto">
+                <HappySVG className="hidden lg:block m-auto lg:p-0 2xl:p-36 w-full h-full" />
                 <div className="flex flex-col lg:w-2/3 lg:m-10 lg:rounded-xl">
                     <h2 className="text-lg m-auto">contact form</h2>
                     <TextInput

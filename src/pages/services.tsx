@@ -7,7 +7,7 @@ export default function Services() {
     return (
         <div className="m-10">
             <h1 className="text-4xl font-bold text-center">{t('title')}</h1>
-            <div className="flex flex-col lg:flex-row justify-center items-center mt-10 lg:flex-wrap">
+            <div className="flex flex-col lg:flex-row justify-center mt-10 lg:flex-wrap">
                 <Service
                     name={t('service_1_name')}
                     image="/images/services/building_Websites.svg"
@@ -56,7 +56,7 @@ const Service = ({ name, image, description }: ServiceProps) => {
                 <Image src={image} alt={name} layout="fill" />
             </div>
             <h1 className="text-2xl font-bold m-auto mt-5">{name}</h1>
-            <p className="text-lg mt-5 text-center">{description}</p>
+            <p className="text-lg mt-5 text-center flex-grow">{description}</p>
         </div>
     );
 };

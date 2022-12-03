@@ -7,7 +7,7 @@ export default function Testimonials() {
         <div className="flex flex-col items-center justify-center bg-secondary pb-10 lg:pb-20">
             <h2 className="mt-10 mb-3 text-4xl lg:text-6xl">{t('title')}</h2>
             <h3 className="lg:text-3xl">{t('subtitle')}</h3>
-            <div className="flex flex-row lg:mx-44">
+            <div className="flex flex-row 2xl:mx-44">
                 <Testimonial name="Unknown" position={t('1_position')}>
                     {t('1_quote', { ns: 'testimonials' })}
                 </Testimonial>
