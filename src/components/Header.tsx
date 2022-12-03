@@ -7,12 +7,16 @@ import Button from './common/Button';
 import HamburgerSVG from './common/svg/Hamburger';
 import Triangle from './common/svg/Triangle';
 
-export default function Header({ onMenuChange }: { onMenuChange: (value: boolean) => void }) {
+export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
-        onMenuChange(isMenuOpen);
-    }, [isMenuOpen, onMenuChange]);
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+    });
 
     const { t } = useTranslation('common');
 
@@ -56,7 +60,7 @@ export default function Header({ onMenuChange }: { onMenuChange: (value: boolean
                     <HamburgerSVG />
                 </div>
                 {isMenuOpen && (
-                    <div className="fixed top-0 left-0 w-full h-full bg-tertiary overflow-hidden z-10 lg:hidden">
+                    <div className="absolute top-0 left-0 w-full h-full bg-tertiary overflow-hidden z-10 lg:hidden">
                         <div className="h-full p-10 pt-20 flex flex-col lg:justify-center lg:items-center">
                             <HeaderLink href="/" name="Home" onClick={() => setIsMenuOpen(false)} />
                             <HeaderLink href="/services" name="Services" onClick={() => setIsMenuOpen(false)} />
