@@ -1,5 +1,5 @@
 import { motion, useAnimation } from 'framer-motion';
-import { SVGProps, useState } from 'react';
+import { SVGProps, useEffect } from 'react';
 
 const variants = {
     hamburger: {
@@ -10,22 +10,16 @@ const variants = {
     },
 };
 
-const HamburgerSVG = (props: SVGProps<SVGSVGElement>) => {
-    const [isOpen, setIsOpen] = useState(false);
-
+const HamburgerSVG = ({ isOpen }: { isOpen: boolean }, props: SVGProps<SVGSVGElement>) => {
     const controls = useAnimation();
 
+    useEffect(() => {
+        console.log(isOpen);
+        controls.start(isOpen ? 'close' : 'hamburger');
+    }, [isOpen]);
+
     return (
-        <svg
-            onClick={() => {
-                controls.start(isOpen ? 'hamburger' : 'close');
-                setIsOpen(!isOpen);
-            }}
-            id="Ebene_2"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 328.58 270.34"
-            {...props}
-        >
+        <svg id="Ebene_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 328.58 270.34" {...props}>
             <defs>
                 <style>
                     {'.cls-1{fill:none;stroke:#eb4034;stroke-linecap:round;stroke-miterlimit:10;stroke-width:60px}'}

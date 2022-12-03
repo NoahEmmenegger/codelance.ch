@@ -57,7 +57,7 @@ export default function Header() {
                     </Link>
                 </div>
                 <div onClick={() => setIsMenuOpen(!isMenuOpen)} className="w-10 z-20 lg:hidden">
-                    <HamburgerSVG />
+                    <HamburgerSVG isOpen={isMenuOpen} />
                 </div>
                 {isMenuOpen && (
                     <div className="absolute top-0 left-0 w-full h-full bg-tertiary overflow-hidden z-10 lg:hidden">
@@ -85,7 +85,7 @@ function HeaderLink({ href, name, onClick }: { href: string; name: string; onCli
             >
                 {name}
 
-                <Triangle className="my-auto ml-3 -rotate-90 lg:hidden" />
+                <Triangle className="my-auto ml-3 -rotate-[90deg] lg:hidden" />
             </motion.a>
         </Link>
     );
