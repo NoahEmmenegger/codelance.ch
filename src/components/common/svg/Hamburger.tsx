@@ -14,9 +14,8 @@ const HamburgerSVG = ({ isOpen }: { isOpen: boolean }, props: SVGProps<SVGSVGEle
     const controls = useAnimation();
 
     useEffect(() => {
-        console.log(isOpen);
         controls.start(isOpen ? 'close' : 'hamburger');
-    }, [isOpen]);
+    }, [controls, isOpen]);
 
     return (
         <svg id="Ebene_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 328.58 270.34" {...props}>

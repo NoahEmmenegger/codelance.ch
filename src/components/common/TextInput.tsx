@@ -31,7 +31,7 @@ export default function TextInput({
         if (onError) {
             onError(errorMessage == undefined);
         }
-    }, [errorMessage]);
+    }, [errorMessage, onError]);
 
     return (
         <div className="my-3">
