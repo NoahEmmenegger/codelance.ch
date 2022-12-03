@@ -5,15 +5,15 @@ type ButtonProps = {
     className?: string;
     text: string;
     disabled?: boolean;
-    onClick?: () => void;
+    onClick?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 };
 
-export default function Button({ children, className, text, disabled = false, onClick = () => {} }: ButtonProps) {
+export default function Button({ children, className, text, disabled = false, onClick }: ButtonProps) {
     return (
         <motion.div
-            onClick={() => {
-                if (!disabled) {
-                    onClick();
+            onClick={(e) => {
+                if (onClick && !disabled) {
+                    onClick(e);
                 }
             }}
             className={
