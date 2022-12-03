@@ -4,8 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Button from './common/Button';
+import ArrowLittleSVG from './common/svg/ArrowLittle';
 import HamburgerSVG from './common/svg/Hamburger';
-import Triangle from './common/svg/Triangle';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -85,7 +85,7 @@ function HeaderLink({ href, name, onClick }: { href: string; name: string; onCli
             >
                 {name}
 
-                <Triangle className="my-auto ml-3 -rotate-[90deg] lg:hidden" />
+                <ArrowLittleSVG className="my-auto ml-2 -rotate-90 lg:hidden" />
             </motion.a>
         </Link>
     );
