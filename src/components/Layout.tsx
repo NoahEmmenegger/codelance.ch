@@ -1,29 +1,9 @@
-import { useTranslation } from 'next-i18next';
-import Head from 'next/head';
 import Footer from './Footer';
 import Header from './Header';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-    const { t } = useTranslation('home');
-
     return (
         <div className={`overflow-hidden`}>
-            <Head>
-                <title>Codelance GmbH</title>
-                <meta property="og:title" content="Codelance GmbH" />
-                <meta name="description" content={t('metaDescription')} />
-                <meta property="og:description" content={t('metaDescription')} />
-                <meta property="og:type" content="website" />
-                <meta name="keywords" content={t('metaKeywords')} />
-                <link rel="icon" href="/favicon.ico" />
-                <meta name="author" content="Noah Emmenegger" />
-                <meta name="theme-color" content="#2C3359" />
-                <meta property="og:image" content="https://www.codelance.ch/images/Codelance_logo.jpg" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta property="twitter:title" content="Codelance GmbH" />
-                <meta property="twitter:description" content={t('metaKeywords')} />
-                <meta property="twitter:image" content="https://www.codelance.ch/images/Codelance_logo.jpg" />
-            </Head>
             <Header />
             <main>{children}</main>
             <Footer />
