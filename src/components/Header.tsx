@@ -78,6 +78,7 @@ function HeaderLink({ href, name, onClick }: { href: string; name: string; onCli
     return (
         <Link href={href}>
             <motion.a
+                href={href}
                 className="p-5 font-bold text-2xl flex lg:font-normal lg:p-0 lg:ml-10 lg:text-xl select-none"
                 whileHover={{ scale: 1.2 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 50 }}
