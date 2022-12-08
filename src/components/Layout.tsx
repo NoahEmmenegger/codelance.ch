@@ -14,11 +14,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <link rel="icon" href="/favicon.ico" />
                 <meta name="author" content="Noah Emmenegger" />
                 <meta name="theme-color" content="#2C3359" />
-                <meta property="og:image" content="https://www.codelance.ch/images/HomeImage.jpg" />
+                <meta property="og:image" content="https://www.codelance.ch/images/Codelance_logo.jpg" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta property="twitter:title" content="Codelance GmbH" />
                 <meta property="twitter:description" content="Codelance GmbH" />
-                <meta property="twitter:image" content="https://www.codelance.ch/images/HomeImage.jpg" />
+                <meta property="twitter:image" content="https://www.codelance.ch/images/Codelance_logo.jpg" />
             </Head>
             <Header />
             <main>{children}</main>
