@@ -21,8 +21,13 @@ const Home: NextPage = () => {
     return (
         <>
             <Head>
-                <title>Codelance GmbH</title>
+                <title>{`Codelance GmbH | ${t('slogan_1')} ${t('slogan_2')} ${t('slogan_3')}`}</title>
+                <meta
+                    property="og:title"
+                    content={`Codelance GmbH | ${t('slogan_1')} ${t('slogan_2')} ${t('slogan_3')}`}
+                />
                 <meta name="description" content={t('metaDescription')} />
+                <meta property="og:description" content={t('metaDescription')} />
                 <meta name="keywords" content={t('metaKeywords')} />
                 <link rel="icon" href="/favicon.ico" />
             </Head>

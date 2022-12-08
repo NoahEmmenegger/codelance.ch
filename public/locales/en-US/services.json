@@ -1,5 +1,8 @@
 {
     "title": "Our Services",
+    "services_meta_title": "Our Services | Codelance GmbH",
+    "services_meta_description": "We offer a wide range of services. We build websites, develop apps, design websites, optimize websites for search engines, provide digital marketing services, and provide web hosting.",
+    "services_meta_keywords": "services, website, app, design, seo, digital marketing, web hosting, codelance, codelance gmbh, codelance gmbh services, codelance gmbh website, codelance gmbh app, codelance gmbh design, codelance gmbh seo, codelance gmbh digital marketing, codelance gmbh web hosting",
     "service_1_name": "Building Websites",
     "service_1_description": "We build websites that are fast, responsive, and easy to use. We use the latest technologies to ensure your website is future-proof. We also provide ongoing support and maintenance for your website. Furthermore, we help you find the best content management system for your needs. The content management system should be easy to use and should allow you to update your website yourself.",
     "service_2_name": "App Development",

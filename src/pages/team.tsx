@@ -1,5 +1,6 @@
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Button from '../components/common/Button';
@@ -8,25 +9,35 @@ export default function Team() {
     const { t } = useTranslation('team');
 
     return (
-        <div className="m-10">
-            <h1 className="text-4xl font-bold text-center">Team</h1>
-            <div className="flex flex-col lg:flex-row justify-center mt-10">
-                <TeamMember
-                    name="Noah Emmenegger"
-                    role={t('person_1_function')}
-                    image="/images/team/avatar.svg"
-                    description={t('person_1_description')}
-                    link="https://ch.linkedin.com/in/noah-emmenegger-757bba235"
-                />
-                <TeamMember
-                    name="Jan Walker"
-                    role={t('person_2_function')}
-                    image="/images/team/avatar.svg"
-                    description={t('person_2_description')}
-                    link="https://ch.linkedin.com/in/jan-walker-jw"
-                />
+        <>
+            <Head>
+                <title>{t('team_meta_title')}</title>
+                <meta property="og:title" content={t('team_meta_title')} />
+                <meta name="description" content={t('team_meta_description')} />
+                <meta property="og:description" content={t('team_meta_description')} />
+                <meta name="keywords" content={t('team_meta_keywords')} />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <div className="m-10">
+                <h1 className="text-4xl font-bold text-center">Team</h1>
+                <div className="flex flex-col lg:flex-row justify-center mt-10">
+                    <TeamMember
+                        name="Noah Emmenegger"
+                        role={t('person_1_function')}
+                        image="/images/team/avatar.svg"
+                        description={t('person_1_description')}
+                        link="https://ch.linkedin.com/in/noah-emmenegger-757bba235"
+                    />
+                    <TeamMember
+                        name="Jan Walker"
+                        role={t('person_2_function')}
+                        image="/images/team/avatar.svg"
+                        description={t('person_2_description')}
+                        link="https://ch.linkedin.com/in/jan-walker-jw"
+                    />
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 
