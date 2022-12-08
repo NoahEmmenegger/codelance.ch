@@ -19,7 +19,7 @@ export default function Team() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className="m-10">
-                <h1 className="text-4xl font-bold text-center">Team</h1>
+                <h1 className="text-4xl font-bold text-center">{t('team_title')}</h1>
                 <div className="flex flex-col lg:flex-row justify-center mt-10">
                     <TeamMember
                         name="Noah Emmenegger"
@@ -50,6 +50,8 @@ type TeamMemberProps = {
 };
 
 const TeamMember = ({ name, role, image, description, link }: TeamMemberProps) => {
+    const { t } = useTranslation('team');
+
     return (
         <div className="mt-10 flex flex-col items-center lg:items-start lg:mr-10 lg:w-1/3">
             <div className="h-80 w-80 relative m-auto">
@@ -60,7 +62,7 @@ const TeamMember = ({ name, role, image, description, link }: TeamMemberProps) =
             <p className="text-lg mt-5 text-center mb-auto flex-grow">{description}</p>
             <Link href={link}>
                 <a className="w-full justify-center flex mt-5">
-                    <Button className="m-auto" text="more" />
+                    <Button className="m-auto" text={t('team_more')} />
                 </a>
             </Link>
         </div>
