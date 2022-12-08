@@ -33,36 +33,36 @@ export default function Contact() {
             </Head>
             <div className="p-10">
                 <div className="mb-10">
-                    <h1 className="text-4xl font-bold text-center">Contact</h1>
-                    <p className="text-center">If you want to contact us you can fill out the following form:</p>
+                    <h1 className="text-4xl font-bold text-center">{t('contact_title')}</h1>
+                    <p className="text-center">{t('contact_subtitle')}</p>
                 </div>
                 <div className="flex lg:w-10/12  2xl:w-8/12 lg:m-auto">
                     <HappySVG className="hidden lg:block m-auto lg:p-0 2xl:p-36 w-full h-full" />
                     <div className="flex flex-col lg:w-2/3 lg:m-10 lg:rounded-xl">
-                        <h2 className="text-lg m-auto">contact form</h2>
+                        <h2 className="text-lg m-auto">{t('contact_form_title')}</h2>
                         <TextInput
-                            placeholder="Jason Warner"
+                            placeholder={t('contact_name_placeholder')}
                             validations={['REQUIRED']}
                             id="name"
-                            label="Name"
+                            label={t('contact_name')}
                             value={contactForm}
                             onChange={setContactForm}
                             onError={setHasNameError}
                         />
                         <TextInput
-                            placeholder="jason@gmail.com"
+                            placeholder={t('contact_email_placeholder')}
                             validations={['REQUIRED', 'EMAIL']}
                             id="email"
-                            label="Email"
+                            label={t('contact_email')}
                             value={contactForm}
                             onChange={setContactForm}
                             onError={setHasEmailError}
                         />
                         <TextArea
-                            placeholder="Write your message here..."
+                            placeholder={t('contact_message_placeholder')}
                             validations={['REQUIRED']}
                             id="message"
-                            label="Message"
+                            label={t('contact_message')}
                             type="text"
                             value={contactForm}
                             onChange={setContactForm}
@@ -83,9 +83,9 @@ export default function Contact() {
                                         setHasMessageError(true);
                                     }),
                                     {
-                                        loading: 'Sending...',
-                                        success: 'Message sent!',
-                                        error: 'Error sending message',
+                                        loading: t('contact_toast_loading'),
+                                        success: t('contact_toast_success'),
+                                        error: t('contact_toast_error'),
                                     },
                                     {
                                         duration: 3000,
@@ -93,9 +93,9 @@ export default function Contact() {
                                 );
                             }}
                             className="m-auto my-5"
-                            text="Send Message"
+                            text={t('contact_send')}
                         />
-                        <small className="text-xs  m-auto">Response time: 48 hours</small>
+                        <small className="text-xs  m-auto">{t('contact_response_time')}</small>
                     </div>
                 </div>
             </div>
