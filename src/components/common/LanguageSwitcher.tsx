@@ -16,7 +16,7 @@ export default function LanguageSwitcher() {
         <div className="relative">
             <div className="cursor-pointer flex" onClick={() => setIsOpen(!isOpen)}>
                 {convertLanguageToEmoji(activeLocale)}
-                <div className="m-auto ml-2">
+                <div className="m-auto ml-4">
                     <Triangle isUp={isOpen} />
                 </div>
             </div>
