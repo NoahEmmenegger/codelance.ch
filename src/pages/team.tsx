@@ -35,6 +35,20 @@ export default function Team() {
                         description={t('person_2_description')}
                         link="https://ch.linkedin.com/in/jan-walker-jw"
                     />
+                    <TeamMember
+                        name="Julian Emmenegger"
+                        role={t('person_3_function')}
+                        image="/images/team/avatar.svg"
+                        description={t('person_3_description')}
+                        link="https://ch.linkedin.com/in/julian-emmenegger-479b05225"
+                    />
+                    {/* <TeamMember
+                        name="Giorgio Franco"
+                        role={t('person_4_function')}
+                        image="/images/team/avatar.svg"
+                        description={t('person_4_description')}
+                        link="https://ch.linkedin.com/in/giorgio-franco-186a86214"
+                    /> */}
                 </div>
             </div>
         </>
