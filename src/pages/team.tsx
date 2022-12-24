@@ -42,13 +42,13 @@ export default function Team() {
                         description={t('person_3_description')}
                         link="https://ch.linkedin.com/in/julian-emmenegger-479b05225"
                     />
-                    {/* <TeamMember
+                    <TeamMember
                         name="Giorgio Franco"
                         role={t('person_4_function')}
                         image="/images/team/avatar.svg"
                         description={t('person_4_description')}
-                        link="https://ch.linkedin.com/in/giorgio-franco-186a86214"
-                    /> */}
+                        link="https://linktr.ee/giorgiofranco"
+                    />
                 </div>
             </div>
         </>
