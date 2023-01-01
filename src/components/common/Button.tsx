@@ -1,14 +1,23 @@
 import { motion } from 'framer-motion';
+import ArrowSmall from './svg/ArrowSmall';
 
 type ButtonProps = {
     children?: React.ReactNode;
     className?: string;
     text: string;
     disabled?: boolean;
+    hasArrow?: boolean;
     onClick?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 };
 
-export default function Button({ children, className, text, disabled = false, onClick }: ButtonProps) {
+export default function Button({
+    children,
+    className,
+    text,
+    disabled = false,
+    hasArrow = false,
+    onClick,
+}: ButtonProps) {
     return (
         <motion.div
             onClick={(e) => {
@@ -25,7 +34,14 @@ export default function Button({ children, className, text, disabled = false, on
             {...(disabled ? {} : { whileTap: { scale: 0.9 } })}
             transition={{ type: 'spring', stiffness: 400, damping: 30 }}
         >
-            <p className="select-none">{text}</p>
+            <p className="select-none flex px-3">
+                {text}
+                {hasArrow && (
+                    <div className="m-auto ml-3">
+                        <ArrowSmall />
+                    </div>
+                )}
+            </p>
             <div className="relative">{children}</div>
         </motion.div>
     );

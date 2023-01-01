@@ -75,7 +75,7 @@ const Home: NextPage = () => {
                     <Wave2 />
                 </div>
                 <div>
-                    <div className="flex flex-col lg:flex-row p-5 lg:p-20">
+                    <div className="flex flex-col lg:flex-row p-5 pt-16 lg:p-20">
                         <p className="lg:w-1/2">
                             <Image
                                 priority
@@ -86,16 +86,15 @@ const Home: NextPage = () => {
                                 alt="Codelance Logo"
                             />
                         </p>
-                        <div className="pt-10 lg:p-0 lg:w-1/2 m-5 lg:m-20">
+                        <div className="pt-10 lg:p-0 lg:w-1/2 m-5 lg:mx-20 lg:my-auto">
                             <h2 className="text-center lg:text-left">{t('section_title')}</h2>
                             <Quote classname="hidden mb-5 lg:flex lg:pt-5">{t('section_quote')}</Quote>
-                            <div className="pt-10 px-10 text-center lg:hidden">
-                                We look forward to getting to know you in a personal meeting!
-                            </div>
+                            <div className="pt-10 text-center lg:hidden">{t('section_quote_small')}</div>
                             <Link href="/team">
                                 <Button
                                     className="m-auto ml-auto mr-auto mt-5 mb-20 lg:m-0 text-lg"
                                     text={t('learn_more_about_us')}
+                                    hasArrow={true}
                                 ></Button>
                             </Link>
                         </div>

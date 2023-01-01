@@ -39,6 +39,7 @@ export default function Contact() {
                 <div className="flex lg:w-10/12  2xl:w-8/12 lg:m-auto">
                     <div className="hidden lg:block m-auto lg:p-0 w-full h-full">
                         <Image
+                            priority
                             className="rounded-[36px]"
                             alt="Contact us"
                             src="/images/contact_us.jpg"
