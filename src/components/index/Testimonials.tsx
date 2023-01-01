@@ -31,7 +31,7 @@ type TestimonialProps = {
 const Testimonial = ({ children, name, position }: TestimonialProps) => {
     return (
         <div className="w-screen p-10 lg:w-full">
-            <div className="lg:w-full h-full bg-accent p-10 rounded-2xl">
+            <div className="lg:w-full h-full bg-quinary p-10 rounded-2xl">
                 <b className="text-xl">{name}</b>
                 <p className="text-xl">{position}</p>
                 <br />

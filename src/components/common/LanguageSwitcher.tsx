@@ -50,10 +50,10 @@ export default function LanguageSwitcher() {
 export function convertLanguageToEmoji(language: string | undefined) {
     switch (language) {
         case 'de':
-            return '🇨🇭 Deutsch';
+            return 'Deutsch';
         case 'en':
-            return '🇬🇧 English';
+            return 'English';
         default:
-            return '🇬🇧 English';
+            return 'English';
     }
 }

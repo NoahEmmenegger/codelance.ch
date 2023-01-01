@@ -20,14 +20,11 @@ const HamburgerSVG = ({ isOpen }: { isOpen: boolean }, props: SVGProps<SVGSVGEle
     return (
         <svg id="Ebene_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 328.58 270.34" {...props}>
             <defs>
-                <style>
-                    {'.cls-1{fill:none;stroke:#eb4034;stroke-linecap:round;stroke-miterlimit:10;stroke-width:60px}'}
-                </style>
+                <style>{'.cls-1{fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:60px}'}</style>
             </defs>
             <g id="Layer_2">
                 <motion.path
-                    style={{ stroke: '#2C3359' }}
-                    className="cls-1"
+                    className="cls-1 stroke-primary"
                     d={variants.hamburger.d}
                     animate={controls}
                     variants={variants}

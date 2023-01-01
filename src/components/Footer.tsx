@@ -9,11 +9,11 @@ export default function Footer() {
     return (
         <footer>
             <FooterWave />
-            <div className="bg-secondary p-10">
+            <div className="bg-tertiary p-10">
                 <div className="select-none">
                     <Image
                         className="select-none pointer-events-none"
-                        src="/logo.svg"
+                        src="/images/logo.svg"
                         height={44}
                         width={240}
                         alt="Logo of Codelance GmbH"

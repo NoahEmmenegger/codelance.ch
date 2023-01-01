@@ -25,7 +25,7 @@ export default function Header() {
             <div className="absolute w-1/2 max-w-[383px] max-h-[125]">
                 <svg className="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 383 125">
                     <path
-                        fill="#E3E5F1"
+                        className="fill-tertiary"
                         d="M-80.065 47.945c-54.766-105.71 28.167-132.167 84.5-137 90.5-14.167 260.547.595 339 64 93.249 75.363 0 128.708-67.5 142-93.251 18.363-318.25 3.863-356-69Z"
                     />
                 </svg>
@@ -35,7 +35,7 @@ export default function Header() {
                     <a className="w-1/3 select-none">
                         <Image
                             priority
-                            src="/logo.svg"
+                            src="/images/logo.svg"
                             className="select-none pointer-events-none"
                             height={44}
                             width={240}

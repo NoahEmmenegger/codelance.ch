@@ -8,10 +8,10 @@ export default function Document() {
                 <link rel="icon" href="/favicon.ico" />
                 <meta name="author" content="Noah Emmenegger" />
                 <meta name="theme-color" content="#2C3359" />
-                <meta property="og:image" content="https://www.codelance.ch/images/Codelance_logo.jpg" />
+                <meta property="og:image" content="https://www.codelance.ch/images/Codelance_logo.png" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta property="twitter:title" content="Codelance GmbH" />
-                <meta property="twitter:image" content="https://www.codelance.ch/images/Codelance_logo.jpg" />
+                <meta property="twitter:image" content="https://www.codelance.ch/images/Codelance_logo.png" />
             </Head>
             <body>
                 <Main />

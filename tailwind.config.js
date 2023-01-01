@@ -7,10 +7,11 @@ module.exports = {
                 poppins: ['Poppins', 'sans-serif'],
             },
             colors: {
-                primary: '#2C3359',
-                secondary: '#CBCEDE',
-                tertiary: '#E3E5F1',
+                primary: '#48317B',
+                secondary: '#ACA0C7',
+                tertiary: '#BEB5D2',
                 quaternary: '#6e63ad',
+                quinary: '#E0DDE9',
                 accent: '#F6F6F6',
             },
             rotate: {
