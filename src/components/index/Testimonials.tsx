@@ -35,7 +35,7 @@ const Testimonial = ({ children, name, position }: TestimonialProps) => {
                 <b>{name}</b>
                 <p>{position}</p>
                 <br />
-                <p>&quot;...{children}...&quot;</p>
+                <p>&quot;{children}&quot;</p>
             </div>
         </div>
     );
