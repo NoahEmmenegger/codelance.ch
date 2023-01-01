@@ -78,6 +78,7 @@ const Home: NextPage = () => {
                     <div className="flex flex-col lg:flex-row p-5 lg:p-20">
                         <p className="lg:w-1/2">
                             <Image
+                                priority
                                 className="rounded-[36px]"
                                 src="/images/team/team.jpg"
                                 width={3960}
@@ -85,11 +86,11 @@ const Home: NextPage = () => {
                                 alt="Codelance Logo"
                             />
                         </p>
-                        <div className="pt-10 lg:p-0 lg:w-1/2 m-20">
+                        <div className="pt-10 lg:p-0 lg:w-1/2 m-5 lg:m-20">
                             <h2 className="text-center lg:text-left">{t('section_title')}</h2>
                             <Quote classname="hidden mb-5 lg:flex lg:pt-5">{t('section_quote')}</Quote>
                             <div className="pt-10 px-10 text-center lg:hidden">
-                                I look forward to getting to know you in a personal meeting!
+                                We look forward to getting to know you in a personal meeting!
                             </div>
                             <Link href="/team">
                                 <Button
