@@ -37,14 +37,14 @@ export default function Contact() {
                     <p className="text-center">{t('contact_subtitle')}</p>
                 </div>
                 <div className="flex lg:w-10/12  2xl:w-8/12 lg:m-auto">
-                    <div className="hidden lg:block m-auto lg:p-0 w-full h-full">
+                    <div className="hidden lg:block m-auto lg:p-10 w-full h-full">
                         <Image
                             priority
                             className="rounded-[36px]"
                             alt="Contact us"
                             src="/images/contact_us.jpg"
-                            width={6000}
-                            height={4000}
+                            width={3840}
+                            height={3840}
                         />
                     </div>
                     <div className="flex flex-col lg:w-2/3 lg:m-10 lg:rounded-xl">
