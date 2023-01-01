@@ -24,28 +24,28 @@ export default function Team() {
                     <TeamMember
                         name="Noah Emmenegger"
                         role={t('person_1_function')}
-                        image="/images/team/avatar.svg"
+                        image="/images/team/noah_emmenegger.jpg"
                         description={t('person_1_description')}
                         link="https://ch.linkedin.com/in/noah-emmenegger-757bba235"
                     />
                     <TeamMember
                         name="Jan Walker"
                         role={t('person_2_function')}
-                        image="/images/team/avatar.svg"
+                        image="/images/team/jan_walker.jpg"
                         description={t('person_2_description')}
                         link="https://ch.linkedin.com/in/jan-walker-jw"
                     />
                     <TeamMember
                         name="Julian Emmenegger"
                         role={t('person_3_function')}
-                        image="/images/team/avatar.svg"
+                        image="/images/team/julian_emmenegger.jpg"
                         description={t('person_3_description')}
                         link="https://ch.linkedin.com/in/julian-emmenegger-479b05225"
                     />
                     <TeamMember
                         name="Giorgio Franco"
                         role={t('person_4_function')}
-                        image="/images/team/avatar.svg"
+                        image="/images/team/giorgio_franco.jpg"
                         description={t('person_4_description')}
                         link="https://linktr.ee/giorgiofranco"
                     />
@@ -69,7 +69,7 @@ const TeamMember = ({ name, role, image, description, link }: TeamMemberProps) =
     return (
         <div className="mt-10 flex flex-col items-center lg:items-start lg:mr-10 lg:w-1/3">
             <div className="h-80 w-80 relative m-auto">
-                <Image src={image} alt={name} layout="fill" />
+                <Image className="rounded-full" src={image} alt={name} layout="fill" />
             </div>
             <h1 className="text-2xl font-bold m-auto mt-5">{name}</h1>
             <h2 className="text-xl font-bold m-auto mt-2">{role}</h2>

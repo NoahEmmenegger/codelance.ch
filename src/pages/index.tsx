@@ -10,7 +10,6 @@ import Button from '../components/common/Button';
 import Quote from '../components/common/Quote';
 import ArrowSVG from '../components/common/svg/Arrow';
 import BlubSVG from '../components/common/svg/Blub';
-import CircleSVG from '../components/common/svg/Circle';
 import Wave1 from '../components/common/svg/Wave1';
 import Wave2 from '../components/common/svg/Wave2';
 import Testimonials from '../components/index/Testimonials';
@@ -77,12 +76,18 @@ const Home: NextPage = () => {
                 </div>
                 <div>
                     <div className="flex flex-col lg:flex-row p-5 lg:p-20">
-                        <p className="lg:w-1/5">
-                            <CircleSVG />
+                        <p className="lg:w-1/2">
+                            <Image
+                                className="rounded-[36px]"
+                                src="/images/team/team.jpg"
+                                width={3960}
+                                height={2640}
+                                alt="Codelance Logo"
+                            />
                         </p>
-                        <div className="pt-10 lg:p-0 lg:w-1/2 m-auto">
-                            <h2 className="text-center lg:text-left">Noah Emmenegger</h2>
-                            <Quote classname="hidden mb-5 lg:flex lg:pt-5">{t('noah_quote')}</Quote>
+                        <div className="pt-10 lg:p-0 lg:w-1/2 m-20">
+                            <h2 className="text-center lg:text-left">{t('section_title')}</h2>
+                            <Quote classname="hidden mb-5 lg:flex lg:pt-5">{t('section_quote')}</Quote>
                             <div className="pt-10 px-10 text-center lg:hidden">
                                 I look forward to getting to know you in a personal meeting!
                             </div>
