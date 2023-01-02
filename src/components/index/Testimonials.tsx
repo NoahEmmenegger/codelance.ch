@@ -13,7 +13,7 @@ export default function Testimonials() {
             <h2 className="mt-10 mb-3 text-4xl lg:text-6xl">{t('title')}</h2>
             <h3 className="lg:text-3xl">{t('subtitle')}</h3>
             <div
-                className="flex flex-row 2xl:mx-44 overflow-x-scroll w-full lg:w-4/5 snap-x scroll-smooth"
+                className="flex flex-row 2xl:mx-44 overflow-x-scroll w-full lg:w-4/5 snap-x scroll-smooth snap-mandatory"
                 ref={ref}
                 onMouseDown={(e) => {
                     e.preventDefault();
@@ -78,7 +78,7 @@ type TestimonialProps = {
 
 const Testimonial = ({ children, name, position }: TestimonialProps) => {
     return (
-        <div className="w-screen p-10 lg:w-1/3 flex-shrink-0 snap-start cursor-grab">
+        <div className="w-full p-10 lg:w-1/3 flex-shrink-0 snap-start cursor-grab">
             <div className="lg:w-full h-full bg-quinary p-10 rounded-2xl">
                 <b className="text-xl">{name}</b>
                 <p className="text-xl">{position}</p>
