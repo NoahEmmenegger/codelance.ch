@@ -34,14 +34,14 @@ export default function Button({
             {...(disabled ? {} : { whileTap: { scale: 0.9 } })}
             transition={{ type: 'spring', stiffness: 400, damping: 30 }}
         >
-            <p className="select-none flex px-3">
-                {text}
+            <div className="select-none flex px-3">
+                <p>{text}</p>
                 {hasArrow && (
                     <div className="m-auto ml-3">
                         <ArrowSmall />
                     </div>
                 )}
-            </p>
+            </div>
             <div className="relative">{children}</div>
         </motion.div>
     );
