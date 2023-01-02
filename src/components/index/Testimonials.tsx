@@ -1,20 +1,22 @@
 import { useTranslation } from 'next-i18next';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Testimonials() {
     const { t } = useTranslation('testimonials');
     const [isDragging, setIsDragging] = useState(false);
     const [dragStartPosition, setDragStartPosition] = useState(0);
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [testimonialsCount, setTestimonialsCount] = useState(0);
 
     const ref = useRef<HTMLDivElement>(null);
 
-    const childrenLength = ref.current?.children.length || 0;
+    useEffect(() => {
+        const childrenLength = ref.current?.children.length || 0;
 
-    const windowSize = ref.current?.clientWidth || 0;
+        const windowSize = ref.current?.clientWidth || 0;
 
-    // set testimonials count to 4 if on mobile and 2 if on desktop
-    const testimonialsCount = windowSize < 1024 ? childrenLength : Math.round(childrenLength / 3);
+        setTestimonialsCount(windowSize < 1024 ? childrenLength : Math.round(childrenLength / 3));
+    }, [ref.current?.clientWidth]);
 
     ref.current?.addEventListener('scroll', () => {
         if (!ref.current) return;
