@@ -5,8 +5,16 @@ export default function Testimonials() {
     const { t } = useTranslation('testimonials');
     const [isDragging, setIsDragging] = useState(false);
     const [dragStartPosition, setDragStartPosition] = useState(0);
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const testimonialsCount = 7;
 
     const ref = useRef<HTMLDivElement>(null);
+
+    ref.current?.addEventListener('scroll', () => {
+        if (!ref.current) return;
+        setCurrentSlide(Math.round((ref.current.scrollLeft / ref.current.scrollWidth) * testimonialsCount));
+    });
 
     return (
         <div className="flex flex-col items-center justify-center bg-secondary pb-10 lg:pb-20">
@@ -69,9 +77,22 @@ export default function Testimonials() {
             <div>
                 {/* dots */}
                 <div className="flex flex-row justify-center mt-10">
-                    <div className="w-3 h-3 bg-quaternary rounded-full"></div>
-                    <div className="w-3 h-3 bg-quaternary rounded-full mx-2"></div>
-                    <div className="w-3 h-3 bg-quaternary rounded-full"></div>
+                    {[...Array(testimonialsCount)].map((_, i) => {
+                        return (
+                            <div
+                                key={i}
+                                className={`cursor-pointer w-3 h-3 rounded-full mx-1 ${
+                                    i === currentSlide ? 'bg-primary' : 'bg-quaternary'
+                                }`}
+                                onClick={() => {
+                                    ref.current?.scrollTo({
+                                        left: (ref.current.scrollWidth / testimonialsCount) * i,
+                                        behavior: 'smooth',
+                                    });
+                                }}
+                            />
+                        );
+                    })}
                 </div>
             </div>
         </div>
