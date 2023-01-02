@@ -7,9 +7,14 @@ export default function Testimonials() {
     const [dragStartPosition, setDragStartPosition] = useState(0);
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    const testimonialsCount = 7;
-
     const ref = useRef<HTMLDivElement>(null);
+
+    const childrenLength = ref.current?.children.length || 0;
+
+    const windowSize = ref.current?.clientWidth || 0;
+
+    // set testimonials count to 4 if on mobile and 2 if on desktop
+    const testimonialsCount = windowSize < 1024 ? childrenLength : Math.round(childrenLength / 3);
 
     ref.current?.addEventListener('scroll', () => {
         if (!ref.current) return;
@@ -52,12 +57,6 @@ export default function Testimonials() {
                     }
                 }}
             >
-                <Testimonial name="Unknown" position={t('1_position')}>
-                    {t('1_quote', { ns: 'testimonials' })}
-                </Testimonial>
-                <Testimonial name="Unknown" position={t('1_position')}>
-                    {t('1_quote', { ns: 'testimonials' })}
-                </Testimonial>
                 <Testimonial name="Unknown" position={t('1_position')}>
                     {t('1_quote', { ns: 'testimonials' })}
                 </Testimonial>
