@@ -13,7 +13,7 @@ export default function Testimonials() {
             <h2 className="mt-10 mb-3 text-4xl lg:text-6xl">{t('title')}</h2>
             <h3 className="lg:text-3xl">{t('subtitle')}</h3>
             <div
-                className="flex flex-row 2xl:mx-44 overflow-x-scroll w-full lg:w-4/5 snap-x scroll-smooth snap-mandatory"
+                className="flex flex-row 2xl:mx-44 overflow-x-scroll w-full lg:w-4/5 snap-x scroll-smooth snap-mandatory scrollbar-hide"
                 ref={ref}
                 onMouseDown={(e) => {
                     e.preventDefault();
@@ -65,6 +65,14 @@ export default function Testimonials() {
                 <Testimonial name="Unknown" position={t('1_position')}>
                     {t('1_quote', { ns: 'testimonials' })}
                 </Testimonial>
+            </div>
+            <div>
+                {/* dots */}
+                <div className="flex flex-row justify-center mt-10">
+                    <div className="w-3 h-3 bg-quaternary rounded-full"></div>
+                    <div className="w-3 h-3 bg-quaternary rounded-full mx-2"></div>
+                    <div className="w-3 h-3 bg-quaternary rounded-full"></div>
+                </div>
             </div>
         </div>
     );
