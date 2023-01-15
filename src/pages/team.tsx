@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
@@ -5,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Button from '../components/common/Button';
 
-export default function Team() {
+export default function Team({ teamMembers }: { teamMembers: any[] }) {
     const { t } = useTranslation('team');
 
     return (
@@ -21,34 +22,16 @@ export default function Team() {
             <div className="m-10">
                 <h1 className="text-4xl font-bold text-center">{t('team_title')}</h1>
                 <div className="flex flex-col lg:flex-row justify-center mt-10">
-                    <TeamMember
-                        name="Noah Emmenegger"
-                        role={t('person_1_function')}
-                        image="/images/team/noah_emmenegger.jpg"
-                        description={t('person_1_description')}
-                        link="https://ch.linkedin.com/in/noah-emmenegger-757bba235"
-                    />
-                    <TeamMember
-                        name="Jan Walker"
-                        role={t('person_2_function')}
-                        image="/images/team/jan_walker.jpg"
-                        description={t('person_2_description')}
-                        link="https://ch.linkedin.com/in/jan-walker-jw"
-                    />
-                    <TeamMember
-                        name="Julian Emmenegger"
-                        role={t('person_3_function')}
-                        image="/images/team/julian_emmenegger.jpg"
-                        description={t('person_3_description')}
-                        link="https://ch.linkedin.com/in/julian-emmenegger-479b05225"
-                    />
-                    <TeamMember
-                        name="Giorgio Franco"
-                        role={t('person_4_function')}
-                        image="/images/team/giorgio_franco.jpg"
-                        description={t('person_4_description')}
-                        link="https://linktr.ee/giorgiofranco"
-                    />
+                    {teamMembers.map((member) => (
+                        <TeamMember
+                            key={member.id}
+                            name={member.Name}
+                            role={member.Position}
+                            image={`http://localhost:1337${member.Image.data[0].attributes.url}`}
+                            description={t('person_1_description')}
+                            link="https://ch.linkedin.com/in/noah-emmenegger-757bba235"
+                        />
+                    ))}
                 </div>
             </div>
         </>
@@ -83,8 +66,15 @@ const TeamMember = ({ name, role, image, description, link }: TeamMemberProps) =
     );
 };
 
-export const getServerSideProps = async ({ locale }: { locale: string }) => ({
-    props: {
-        ...(await serverSideTranslations(locale, ['common', 'team'])),
-    },
-});
+export const getServerSideProps = async ({ locale }: { locale: string }) => {
+    console.log(locale);
+    const res = await axios(`http://localhost:1337/api/team?populate[TeamMember][populate][0]=Image&locale=${locale}`);
+    console.log(res.data);
+
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common', 'team'])),
+            teamMembers: res.data.data.attributes.TeamMember,
+        },
+    };
+};
