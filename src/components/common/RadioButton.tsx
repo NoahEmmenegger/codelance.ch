@@ -15,6 +15,7 @@ export default function RadioButton({ items, onChange, defaultValue }: RadioButt
             {items.map((item, index) => (
                 <div key={index} className="flex items-center">
                     <input
+                        data-hj-allow
                         type="radio"
                         name="radio"
                         id={item}

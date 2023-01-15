@@ -39,6 +39,7 @@ export default function TextInput({
                 {label}
             </label>
             <input
+                data-hj-allow
                 placeholder={placeholder}
                 className="border border-gray-300 rounded-md p-2 w-full mt-2"
                 value={value[id]}
