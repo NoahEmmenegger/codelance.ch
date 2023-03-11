@@ -31,17 +31,15 @@ export default function Header() {
                 </svg>
             </div>
             <div className="flex justify-between items-center p-5 pl-8 lg:p-10">
-                <Link href="/">
-                    <a className="w-1/3 select-none">
-                        <Image
-                            priority
-                            src="/images/logo.svg"
-                            className="select-none pointer-events-none"
-                            height={44}
-                            width={240}
-                            alt="Logo of Codelance GmbH"
-                        />
-                    </a>
+                <Link href="/" className="w-1/3 select-none">
+                    <Image
+                        priority
+                        src="/images/logo.svg"
+                        className="select-none pointer-events-none"
+                        height={44}
+                        width={240}
+                        alt="Logo of Codelance GmbH"
+                    />
                 </Link>
 
                 <div className="hidden lg:flex w-1/3 justify-center">
@@ -51,9 +49,7 @@ export default function Header() {
                 </div>
                 <div className="hidden lg:flex w-1/3 m-auto ml-auto justify-end">
                     <Link href="/contact">
-                        <a>
-                            <Button text={t('contact_us')} />
-                        </a>
+                        <Button text={t('contact_us')} />
                     </Link>
                 </div>
                 <div onClick={() => setIsMenuOpen(!isMenuOpen)} className="w-10 z-20 lg:hidden">
@@ -76,7 +72,7 @@ export default function Header() {
 
 function HeaderLink({ href, name, onClick }: { href: string; name: string; onClick?: () => void }) {
     return (
-        <Link href={href}>
+        <Link href={href} legacyBehavior>
             <motion.a
                 href={href}
                 className="p-5 font-bold text-2xl flex lg:font-normal lg:p-0 lg:ml-10 lg:text-xl select-none"

@@ -13,9 +13,7 @@ export default function FourOhFour() {
             </div>
             <h1 className="text-4xl font-bold text-center pt-10">{t('page_not_found')}</h1>
             <Link href="/">
-                <a>
-                    <Button text={t('go_home')} className="m-auto ml-auto mr-auto mt-10"></Button>
-                </a>
+                <Button text={t('go_home')} className="m-auto ml-auto mr-auto mt-10"></Button>
             </Link>
         </div>
     );

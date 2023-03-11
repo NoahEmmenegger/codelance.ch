@@ -60,8 +60,8 @@ export default function Footer() {
 }
 
 const FooterLink = ({ href, name }: { href: string; name: string }) => (
-    <Link href={href}>
-        <a className="text-primary mx-auto my-1 font-semibold lg:text-xl lg:ml-5">{name}</a>
+    <Link href={href} className="text-primary mx-auto my-1 font-semibold lg:text-xl lg:ml-5">
+        {name}
     </Link>
 );
 

@@ -44,7 +44,7 @@ const Home: NextPage = () => {
                         >
                             <Quote classname="py-10 hidden lg:flex">{t('quote')}</Quote>
                             <div className="pt-5 lg:pt-10 px-10 text-center lg:hidden">{t('quote')}</div>
-                            <Link href="/services">
+                            <Link href="/services" legacyBehavior>
                                 <Button className="m-auto ml-auto mr-auto mt-5 mb-20 lg:m-0" text={t('learn_more')}>
                                     <div className="absolute h-auto w-52 -right-64 -top-14 cursor-default">
                                         <ArrowSVG delay={6} />
@@ -90,7 +90,7 @@ const Home: NextPage = () => {
                             <h2 className="text-center lg:text-left">{t('section_title')}</h2>
                             <Quote classname="hidden mb-5 lg:flex lg:pt-5">{t('section_quote')}</Quote>
                             <div className="pt-10 text-center lg:hidden">{t('section_quote_small')}</div>
-                            <Link href="/team">
+                            <Link href="/team" legacyBehavior>
                                 <Button
                                     className="m-auto ml-auto mr-auto mt-5 mb-20 lg:m-0 text-lg"
                                     text={t('learn_more_about_us')}

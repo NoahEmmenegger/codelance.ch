@@ -28,16 +28,14 @@ export default function LanguageSwitcher() {
 
                             return (
                                 <Link key={locale} href={{ pathname, query }} as={asPath} locale={locale}>
-                                    <a>
-                                        <div
-                                            className="cursor-pointer hover:bg-primaryDark p-2 "
-                                            onClick={() => {
-                                                setIsOpen(false);
-                                            }}
-                                        >
-                                            {convertLanguageToEmoji(locale)}
-                                        </div>
-                                    </a>
+                                    <div
+                                        className="cursor-pointer hover:bg-primaryDark p-2 "
+                                        onClick={() => {
+                                            setIsOpen(false);
+                                        }}
+                                    >
+                                        {convertLanguageToEmoji(locale)}
+                                    </div>
                                 </Link>
                             );
                         })}
