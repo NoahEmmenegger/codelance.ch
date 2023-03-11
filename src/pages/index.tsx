@@ -33,7 +33,7 @@ const Home: NextPage = () => {
 
             <main>
                 <div className="flex flex-col lg:flex-row lg:h-[75vh]">
-                    <div className="pt-5 lg:pt-10 lg:p-28 lg:w-2/3 2xl:w-1/3 lg:my-auto">
+                    <div className="pt-5 lg:pt-10 lg:p-28 lg:w-2/3 2xl:w-1/3 lg:my-auto z-10">
                         <WordsAnimation text={t('slogan_1')} replay={true} delay={0.5} />
                         <WordsAnimation text={t('slogan_2')} replay={true} delay={0.7} />
                         <WordsAnimation text={t('slogan_3')} replay={true} duration={10} delay={1.5} />
@@ -84,6 +84,8 @@ const Home: NextPage = () => {
                                 src="/images/team/team.jpg"
                                 width={3960}
                                 height={2640}
+                                sizes="(max-width: 1024px) 100vw,
+                                50vw"
                                 alt="Codelance Logo"
                             />
                         </p>
