@@ -9,7 +9,7 @@ export default function FourOhFour() {
     return (
         <div className="my-10">
             <div className="h-96 relative">
-                <Image src="/images/page_not_found.svg" alt="404" layout="fill" />
+                <Image src="/images/page_not_found.svg" alt="404" sizes="100vw" fill />
             </div>
             <h1 className="text-4xl font-bold text-center pt-10">{t('page_not_found')}</h1>
             <Link href="/">

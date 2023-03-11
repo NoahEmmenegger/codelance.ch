@@ -22,7 +22,7 @@ export default function Header() {
 
     return (
         <header>
-            <div className="absolute w-1/2 max-w-[383px] max-h-[125]">
+            <div className="absolute w-1/2 max-w-[383px] max-h-[125] -z-10">
                 <svg className="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 383 125">
                     <path
                         className="fill-tertiary"
@@ -41,7 +41,6 @@ export default function Header() {
                         alt="Logo of Codelance GmbH"
                     />
                 </Link>
-
                 <div className="hidden lg:flex w-1/3 justify-center">
                     <HeaderLink href="/" name={t('nav_1')} />
                     <HeaderLink href="/services" name={t('nav_2')} />

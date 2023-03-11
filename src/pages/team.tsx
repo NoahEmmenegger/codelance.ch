@@ -69,7 +69,7 @@ const TeamMember = ({ name, role, image, description, link }: TeamMemberProps) =
     return (
         <div className="mt-10 flex flex-col items-center lg:items-start lg:mr-10 lg:w-1/3">
             <div className="h-80 w-80 relative m-auto select-none">
-                <Image priority className="rounded-full" src={image} alt={name} layout="fill" />
+                <Image priority className="rounded-full" src={image} alt={name} sizes="100vw" fill />
             </div>
             <h1 className="text-2xl font-bold m-auto mt-5">{name}</h1>
             <h2 className="text-xl font-bold m-auto mt-2">{role}</h2>

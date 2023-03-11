@@ -61,7 +61,8 @@ const Home: NextPage = () => {
                             className="select-none pointer-events-none"
                             priority
                             src="/images/HomeImage.svg"
-                            layout="fill"
+                            sizes="100vw"
+                            fill
                             alt="Freelancer coding a website"
                         />
                         <div className="absolute h-80 w-80 lg:h-auto lg:w-full -z-10 -bottom-64">

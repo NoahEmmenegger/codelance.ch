@@ -64,7 +64,7 @@ const Service = ({ name, image, description }: ServiceProps) => {
     return (
         <div className="flex flex-col items-center lg:items-start lg:p-10 lg:w-1/3">
             <div className="h-80 w-80 relative m-auto">
-                <Image src={image} alt={name} layout="fill" />
+                <Image src={image} alt={name} sizes="100vw" fill />
             </div>
             <h1 className="text-2xl font-bold m-auto mt-5">{name}</h1>
             <p className="text-lg mt-5 text-center flex-grow">{description}</p>
