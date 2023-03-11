@@ -59,19 +59,19 @@ export default function Testimonials() {
                     }
                 }}
             >
-                <Testimonial name="Unknown" position={t('1_position')}>
+                <Testimonial name="Anonym" position={t('1_position')}>
                     {t('1_quote', { ns: 'testimonials' })}
                 </Testimonial>
-                <Testimonial name="Unknown" position={t('1_position')}>
+                <Testimonial name="Anonym" position={t('1_position')}>
                     {t('1_quote', { ns: 'testimonials' })}
                 </Testimonial>
-                <Testimonial name="Unknown" position={t('1_position')}>
+                <Testimonial name="Anonym" position={t('1_position')}>
                     {t('1_quote', { ns: 'testimonials' })}
                 </Testimonial>
-                <Testimonial name="Unknown" position={t('1_position')}>
+                <Testimonial name="Anonym" position={t('1_position')}>
                     {t('1_quote', { ns: 'testimonials' })}
                 </Testimonial>
-                <Testimonial name="Unknown" position={t('1_position')}>
+                <Testimonial name="Anonym" position={t('1_position')}>
                     {t('1_quote', { ns: 'testimonials' })}
                 </Testimonial>
             </div>
