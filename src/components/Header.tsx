@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Button from './common/Button';
 import ArrowLittleSVG from './common/svg/ArrowLittle';
@@ -9,6 +10,7 @@ import HamburgerSVG from './common/svg/Hamburger';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const router = useRouter();
 
     useEffect(() => {
         if (isMenuOpen) {
@@ -18,7 +20,26 @@ export default function Header() {
         }
     });
 
+    useEffect(() => {
+        if (isMenuOpen) {
+            setIsMenuOpen(!isMenuOpen);
+        }
+    }, [router.asPath]);
+
     const { t } = useTranslation('common');
+
+    const MobileHeaderLink = ({ href, name }: { href: string; name: string }) => {
+        return (
+            <Link
+                href={href}
+                className="p-5 font-bold text-2xl flex lg:font-normal lg:p-0 lg:ml-10 lg:text-xl select-none"
+                onClick={() => (href === router.asPath ? setIsMenuOpen(false) : undefined)}
+            >
+                {name}
+                <ArrowLittleSVG className="my-auto ml-2 -rotate-90 lg:hidden" />
+            </Link>
+        );
+    };
 
     return (
         <header>
@@ -57,10 +78,10 @@ export default function Header() {
                 {isMenuOpen && (
                     <div className="absolute top-0 left-0 w-full h-full bg-tertiary overflow-hidden z-20 lg:hidden">
                         <div className="h-full p-10 pt-20 flex flex-col lg:justify-center lg:items-center">
-                            <HeaderLink href="/" name="Home" onClick={() => setIsMenuOpen(false)} />
-                            <HeaderLink href="/services" name="Services" onClick={() => setIsMenuOpen(false)} />
-                            <HeaderLink href="/team" name="Team" onClick={() => setIsMenuOpen(false)} />
-                            <HeaderLink href="/contact" name="Contact us" onClick={() => setIsMenuOpen(false)} />
+                            <MobileHeaderLink href="/" name="Home" />
+                            <MobileHeaderLink href="/services" name="Services" />
+                            <MobileHeaderLink href="/team" name="Team" />
+                            <MobileHeaderLink href="/contact" name="Contact us" />
                         </div>
                     </div>
                 )}
@@ -69,7 +90,7 @@ export default function Header() {
     );
 }
 
-function HeaderLink({ href, name, onClick }: { href: string; name: string; onClick?: () => void }) {
+function HeaderLink({ href, name }: { href: string; name: string }) {
     return (
         <Link href={href} legacyBehavior>
             <motion.a
@@ -77,7 +98,6 @@ function HeaderLink({ href, name, onClick }: { href: string; name: string; onCli
                 className="p-5 font-bold text-2xl flex lg:font-normal lg:p-0 lg:ml-10 lg:text-xl select-none"
                 whileHover={{ scale: 1.2 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 50 }}
-                onClick={onClick}
             >
                 {name}
 
