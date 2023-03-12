@@ -55,7 +55,7 @@ export default function Header() {
                     <HamburgerSVG isOpen={isMenuOpen} />
                 </div>
                 {isMenuOpen && (
-                    <div className="absolute top-0 left-0 w-full h-full bg-tertiary overflow-hidden z-10 lg:hidden">
+                    <div className="absolute top-0 left-0 w-full h-full bg-tertiary overflow-hidden z-20 lg:hidden">
                         <div className="h-full p-10 pt-20 flex flex-col lg:justify-center lg:items-center">
                             <HeaderLink href="/" name="Home" onClick={() => setIsMenuOpen(false)} />
                             <HeaderLink href="/services" name="Services" onClick={() => setIsMenuOpen(false)} />
