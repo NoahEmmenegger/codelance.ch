@@ -12,6 +12,7 @@ export default function Document() {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta property="twitter:title" content="Codelance GmbH" />
                 <meta property="twitter:image" content="https://www.codelance.ch/images/Codelance_logo.png" />
+                <meta name="robots" content="all" />
             </Head>
             <body>
                 <Main />

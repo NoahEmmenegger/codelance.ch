@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /_next/*
+Allow: *.js
+Allow: *.css
+Allow: *.gif
+Allow: *.png
+Allow: *.jpg
+Allow: *.svg
+
+Sitemap: https://www.codelance.ch/sitemap.xml
