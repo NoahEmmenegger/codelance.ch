@@ -72,7 +72,7 @@ export default function Header() {
                         <Button text={t('contact_us')} />
                     </Link>
                 </div>
-                <div onClick={() => setIsMenuOpen(!isMenuOpen)} className="w-10 z-20 lg:hidden">
+                <div onClick={() => setIsMenuOpen(!isMenuOpen)} className="w-10 z-30 lg:hidden">
                     <HamburgerSVG isOpen={isMenuOpen} />
                 </div>
                 {isMenuOpen && (
