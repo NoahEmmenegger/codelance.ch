@@ -1,13 +1,13 @@
 {
-    "nav_1": "Startseite",
-    "nav_2": "Dienstleistungen",
-    "nav_3": "Team",
-    "nav_4": "Nutzungsbedingungen",
-    "nav_5": "Datenschutz",
-    "contact_us": "Kontaktieren Sie uns",
-    "page_not_found": "Seite nicht gefunden",
-    "go_home": "Zurück zur Startseite",
-    "footerText": "Wir sind ein motiviertes Schweizer Entwicklerteam, das Ihnen gerne hilft, Ihr Traum-IT-Projekt zu realisieren. Denken Sie nie, dass ein Projekt unmöglich wäre. Wir freuen uns, mit Ihnen in Kontakt zu treten und Ihre Projektidee zu besprechen.",
-    "validation_error_required": "Dieses Feld ist erforderlich.",
-    "validation_error_email": "Bitte geben Sie eine gültige E-Mail Adresse ein."
+  "nav_1": "Startseite",
+  "nav_2": "Dienstleistungen",
+  "nav_3": "Team",
+  "nav_4": "Nutzungsbedingungen",
+  "nav_5": "Datenschutz",
+  "contact_us": "Kontaktieren Sie uns",
+  "page_not_found": "Seite nicht gefunden",
+  "go_home": "Zurück zur Startseite",
+  "footerText": "Wir sind ein junges und motiviertes Software-Entwicklungsteam mit Sitz in der Schweiz. Es ist unsere Leidenschaft, Ihr digitales Traumprojekt in die Realität umzusetzen. Denken Sie nie, dass ein Projekt unmöglich wäre. Wir freuen uns darauf, mit Ihnen in Kontakt zu treten und Ihre Projektidee zu besprechen.",
+  "validation_error_required": "Dieses Feld ist erforderlich.",
+  "validation_error_email": "Bitte geben Sie eine gültige E-Mail Adresse ein."
 }
