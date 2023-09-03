@@ -1,6 +1,10 @@
 {
-    "title": "Testimonials",
-    "subtitle": "What our customers say about us",
-    "1_position": "CEO at Company",
-    "1_quote": "The tight schedule was always adhered to and adjustments on the part of the customer were very responded very flexibly"
+  "title": "Testimonials",
+  "subtitle": "What our customers say about us",
+  "1_position": "Project Manager GIBZ App",
+  "1_quote": "We really like the design of the new GIBZ app! Our ideas and suggestions were always well received, critically scrutinized and professionally implemented.",
+  "2_position": "Owner of wwww.faragulo.com",
+  "2_quote": "A young and very ambitious team! I am very satisfied with the service offered and can only recommend Codelance GmbH!",
+  "3_position": "CEO at Company",
+  "3_quote": "The tight schedule was always adhered to and adjustments on the part of the customer were very responded very flexibly"
 }
