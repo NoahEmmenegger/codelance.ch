@@ -1,15 +1,15 @@
 {
-    "team_meta_title": "Our Team | Codelance GmbH",
-    "team_meta_description": "Codelance is a young company that specializes in the development of websites, apps and software. Noah Emmenegger, Jan Walker, Julian Emmenegger and Giorgio Franco are the founders and developers of the company.",
-    "team_meta_keywords": "Codelance, Team, Noah Emmenegger, Jan Walker, Julian Emmenegger, Giorgio Franco, Developer, Software, Website, App, Baar, canton Zug, Switzerland",
-    "team_title": "Our Team",
-    "team_more": "more",
-    "person_1_function": "Developer",
-    "person_1_description": "Noah Emmenegger is a full-stack developer who loves programming. He currently goes to school at GIBZ in Zug. He founded this company to help other companies realize their IT dreams.",
-    "person_2_function": "Developer",
-    "person_2_description": "Jan Walker previously attended a four-year-long apprenticeship specializing in Software Development. During this time, he worked as a full stack developer in multiple departments in one of the biggest pharmaceutical and diagnostics company in the world.",
-    "person_3_function": "UX-Designer",
-    "person_3_description": "Julian is currently completing his four-year apprenticeship as a mediamatrician. At codelance he works as a UX-designer and manages the marketing of the company.",
-    "person_4_function": "Developer",
-    "person_4_description": "Giorgio is a goal-oriented software developer who enjoys learning new skills and improving his existing ones. He finds software development challenging and rewarding due to the variety of potential solutions it offers."
+  "team_meta_title": "Our Team | Codelance GmbH",
+  "team_meta_description": "Codelance is a young company that specializes in the development of websites, apps and software. Noah Emmenegger, Jan Walker, Julian Emmenegger and Giorgio Franco are the founders and developers of the company.",
+  "team_meta_keywords": "Codelance, Team, Noah Emmenegger, Jan Walker, Julian Emmenegger, Giorgio Franco, Developer, Software, Website, App, Baar, canton Zug, Switzerland",
+  "team_title": "Our Team",
+  "team_more": "more",
+  "person_1_function": "Full-Stack Developer",
+  "person_1_description": "Noah Emmenegger, an ardent full-stack developer, founded this company with the unwavering commitment to assist other organizations in realizing their IT dreams.",
+  "person_2_function": "Full-Stack Developer",
+  "person_2_description": "Jan Walker helps you scale your solution according to any situation through his experience in one of the largest pharmaceutical and diagnostic companies in the world.",
+  "person_3_function": "UX-Designer",
+  "person_3_description": "Julian Emmenegger is currently completing his four-year apprenticeship as a mediamatrician. At codelance he works as a UX-designer and manages the marketing of the company.",
+  "person_4_function": "Full-Stack Developer",
+  "person_4_description": "Giorgio Franco is a goal-oriented software developer who enjoys learning new skills and improving his existing ones. He finds software development challenging and rewarding due to the variety of potential solutions it offers."
 }
