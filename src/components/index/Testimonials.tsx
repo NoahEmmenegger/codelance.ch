@@ -69,27 +69,7 @@ export default function Testimonials() {
                     {t('3_quote', { ns: 'testimonials' })}
                 </Testimonial>
             </div>
-            <div>
-                {/* dots */}
-                <div className="flex flex-row justify-center mt-10">
-                    {[...Array(testimonialsCount)].map((_, i) => {
-                        return (
-                            <div
-                                key={i}
-                                className={`cursor-pointer w-3 h-3 rounded-full mx-1 ${
-                                    i === currentSlide ? 'bg-primary' : 'bg-quaternary'
-                                }`}
-                                onClick={() => {
-                                    ref.current?.scrollTo({
-                                        left: (ref.current.scrollWidth / testimonialsCount) * i,
-                                        behavior: 'smooth',
-                                    });
-                                }}
-                            />
-                        );
-                    })}
-                </div>
-            </div>
+           
         </div>
     );
 }
