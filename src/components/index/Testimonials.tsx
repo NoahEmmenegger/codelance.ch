@@ -24,53 +24,73 @@ export default function Testimonials() {
     });
 
     return (
-        <div className="flex flex-col items-center justify-center bg-secondary pb-10 lg:pb-20">
-            <h2 className="mt-10 mb-3 text-4xl lg:text-6xl">{t('title')}</h2>
-            <h3 className="lg:text-3xl">{t('subtitle')}</h3>
-            <div
-                className="flex flex-row 2xl:mx-44 overflow-x-scroll w-full lg:w-4/5 snap-x scroll-smooth snap-mandatory scrollbar-hide"
-                ref={ref}
-                onMouseDown={(e) => {
-                    e.preventDefault();
-                    setDragStartPosition(e.clientX);
-                    setIsDragging(true);
-                }}
-                onMouseUp={(e) => {
-                    e.preventDefault();
-                    setIsDragging(false);
-                }}
-                onMouseMove={(e) => {
-                    if (isDragging) {
-                        e.preventDefault();
-                        // if move left
-                        if (e.clientX < dragStartPosition) {
-                            ref.current?.scrollTo({
-                                left: ref.current.scrollLeft + 500,
-                                behavior: 'smooth',
-                            });
-                        }
-                        // if move right
-                        else {
-                            ref.current?.scrollTo({
-                                left: ref.current.scrollLeft - 500,
-                                behavior: 'smooth',
-                            });
-                        }
-                    }
-                }}
-            >
-                <Testimonial name="Peter Gisler" position={t('1_position')}>
-                    {t('1_quote', { ns: 'testimonials' })}
-                </Testimonial>
-                <Testimonial name="Dario Faragulo" position={t('2_position')}>
-                    {t('2_quote', { ns: 'testimonials' })}
-                </Testimonial>
-                <Testimonial name="Anonym" position={t('3_position')}>
-                    {t('3_quote', { ns: 'testimonials' })}
-                </Testimonial>
-            </div>
-           
+      <div className="flex flex-col items-center justify-center bg-secondary pb-10 lg:pb-20">
+        <h2 className="mt-10 mb-3 text-4xl lg:text-6xl">{t("title")}</h2>
+        <h3 className="lg:text-3xl">{t("subtitle")}</h3>
+        <div
+          className="flex flex-row 2xl:mx-44 overflow-x-scroll w-full lg:w-4/5 snap-x scroll-smooth snap-mandatory scrollbar-hide"
+          ref={ref}
+          onMouseDown={(e) => {
+            e.preventDefault();
+            setDragStartPosition(e.clientX);
+            setIsDragging(true);
+          }}
+          onMouseUp={(e) => {
+            e.preventDefault();
+            setIsDragging(false);
+          }}
+          onMouseMove={(e) => {
+            if (isDragging) {
+              e.preventDefault();
+              // if move left
+              if (e.clientX < dragStartPosition) {
+                ref.current?.scrollTo({
+                  left: ref.current.scrollLeft + 500,
+                  behavior: "smooth",
+                });
+              }
+              // if move right
+              else {
+                ref.current?.scrollTo({
+                  left: ref.current.scrollLeft - 500,
+                  behavior: "smooth",
+                });
+              }
+            }
+          }}
+        >
+          <Testimonial name="Peter Gisler" position={t("1_position")}>
+            {t("1_quote", { ns: "testimonials" })}
+          </Testimonial>
+          <Testimonial name="Dario Faragulo" position={t("2_position")}>
+            {t("2_quote", { ns: "testimonials" })}
+          </Testimonial>
+          <Testimonial name="Anonym" position={t("3_position")}>
+            {t("3_quote", { ns: "testimonials" })}
+          </Testimonial>
         </div>
+        <div>
+          {/* dots */}
+          <div className="flex flex-row justify-center mt-10 visible lg:invisible">
+            {[...Array(testimonialsCount)].map((_, i) => {
+              return (
+                <div
+                  key={i}
+                  className={`cursor-pointer w-3 h-3 rounded-full mx-1 ${
+                    i === currentSlide ? "bg-primary" : "bg-quaternary"
+                  }`}
+                  onClick={() => {
+                    ref.current?.scrollTo({
+                      left: (ref.current.scrollWidth / testimonialsCount) * i,
+                      behavior: "smooth",
+                    });
+                  }}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </div>
     );
 }
 
@@ -85,7 +105,7 @@ const Testimonial = ({ children, name, position }: TestimonialProps) => {
         <div className="w-full p-10 lg:w-1/3 flex-shrink-0 snap-start cursor-grab">
             <div className="lg:w-full h-full bg-quinary p-10 rounded-2xl">
                 <b className="text-xl">{name}</b>
-                <p className="text-xl">{position}</p>
+                <p className="text-xl break-words">{position}</p>
                 <br />
                 <p className="text-xl">&quot;{children}&quot;</p>
             </div>
