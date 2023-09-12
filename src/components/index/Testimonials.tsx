@@ -114,7 +114,7 @@ const Testimonial = ({ children, name, position, image }: TestimonialProps) => {
             {image ? (
               <Image
                 priority
-                className="rounded-full h-24 w-24 md:h-auto md:w-auto"
+                className="rounded-full h-24 w-24"
                 alt="Contact us"
                 src={"/images/testimonials/" + name?.replace(' ', '_').toLocaleLowerCase() + ".jpeg"}
                 placeholder="blur"
@@ -125,7 +125,7 @@ const Testimonial = ({ children, name, position, image }: TestimonialProps) => {
             ) : (
               <Image
                 priority
-                className="rounded-full p-2"
+                className="rounded-full p-2 h-24 w-24"
                 alt="Contact us"
                 src="/images/user.svg"
                 width={80}
