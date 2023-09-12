@@ -73,7 +73,7 @@ const TeamMember = ({ name, role, image, description, link }: TeamMemberProps) =
             </div>
             <h1 className="text-2xl font-bold m-auto mt-5">{name}</h1>
             <h2 className="text-xl font-bold m-auto mt-2">{role}</h2>
-            <p className="text-lg mt-5 text-center mb-auto flex-grow">{description}</p>
+            <p className="text-lg mt-5 text-center mb-auto flex-grow px-4 stroke-current">{description}</p>
             <Link href={link} className="w-full justify-center flex mt-5">
                 <Button className="m-auto" text={t('team_more')} hasArrow={true} />
             </Link>

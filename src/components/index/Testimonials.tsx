@@ -1,5 +1,6 @@
 import { useTranslation } from 'next-i18next';
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 
 export default function Testimonials() {
     const { t } = useTranslation('testimonials');
@@ -15,7 +16,7 @@ export default function Testimonials() {
 
         const windowSize = ref.current?.clientWidth || 0;
 
-        setTestimonialsCount(windowSize < 1024 ? childrenLength : Math.round(childrenLength / 3));
+        setTestimonialsCount(windowSize < 1536 ? childrenLength : Math.round(childrenLength / 3));
     }, [ref.current?.clientWidth]);
 
     ref.current?.addEventListener('scroll', () => {
@@ -59,19 +60,19 @@ export default function Testimonials() {
             }
           }}
         >
-          <Testimonial name="Peter Gisler" position={t("1_position")}>
+          <Testimonial name="Peter Gisler" position={t("1_position")} image={true}>
             {t("1_quote", { ns: "testimonials" })}
           </Testimonial>
-          <Testimonial name="Dario Faragulo" position={t("2_position")}>
+          <Testimonial name="Dario Faragulo" position={t("2_position")} image={true}>
             {t("2_quote", { ns: "testimonials" })}
           </Testimonial>
-          <Testimonial name="Anonym" position={t("3_position")}>
+          <Testimonial name="Anonym" position={t("3_position")} image={false}>
             {t("3_quote", { ns: "testimonials" })}
           </Testimonial>
         </div>
         <div>
           {/* dots */}
-          <div className="flex flex-row justify-center mt-10 visible lg:invisible">
+          <div className="flex flex-row justify-center mt-10 visible 2xl:invisible">
             {[...Array(testimonialsCount)].map((_, i) => {
               return (
                 <div
@@ -98,17 +99,43 @@ type TestimonialProps = {
     children?: React.ReactNode;
     name?: string;
     position?: string;
+    image: boolean;
 };
 
-const Testimonial = ({ children, name, position }: TestimonialProps) => {
+const Testimonial = ({ children, name, position, image }: TestimonialProps) => {
     return (
-        <div className="w-full p-10 lg:w-1/3 flex-shrink-0 snap-start cursor-grab">
-            <div className="lg:w-full h-full bg-quinary p-10 rounded-2xl">
+        <div className="w-full p-10 2xl:w-1/3 flex-shrink-0 snap-start cursor-grab">
+          <div className="2xl:w-full h-full bg-quinary p-10 rounded-2xl">
+            <div className="flex flex-row justify-between">
+              <div className="w-2/3">
                 <b className="text-xl">{name}</b>
-                <p className="text-xl break-words">{position}</p>
-                <br />
-                <p className="text-xl">&quot;{children}&quot;</p>
+                <p className="text-xl break-words">{position}</p> 
             </div>
+            {image ? (
+              <Image
+                priority
+                className="rounded-full"
+                alt="Contact us"
+                src={"/images/testimonials/" + name?.replace(' ', '_').toLocaleLowerCase() + ".jpeg"}
+                placeholder="blur"
+                blurDataURL='/images/user.svg'
+                width={80}
+                height={80}
+              />
+            ) : (
+              <Image
+                priority
+                className="rounded-full p-2"
+                alt="Contact us"
+                src="/images/user.svg"
+                width={80}
+                height={80}
+              />
+            )}
+            </div>
+            <br />
+            <p className="text-xl">&quot;{children}&quot;</p>
+          </div>
         </div>
     );
 };
