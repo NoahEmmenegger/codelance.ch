@@ -107,14 +107,14 @@ const Testimonial = ({ children, name, position, image }: TestimonialProps) => {
         <div className="w-full p-10 2xl:w-1/3 flex-shrink-0 snap-start cursor-grab">
           <div className="2xl:w-full h-full bg-quinary p-10 rounded-2xl">
             <div className="flex flex-row justify-between">
-              <div className="w-2/3">
+              <div className="w-auto md:w-2/3">
                 <b className="text-xl">{name}</b>
                 <p className="text-xl break-words">{position}</p> 
             </div>
             {image ? (
               <Image
                 priority
-                className="rounded-full"
+                className="rounded-full h-24 w-24 md:h-auto md:w-auto"
                 alt="Contact us"
                 src={"/images/testimonials/" + name?.replace(' ', '_').toLocaleLowerCase() + ".jpeg"}
                 placeholder="blur"
