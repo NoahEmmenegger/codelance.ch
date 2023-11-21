@@ -12,6 +12,7 @@ import ArrowSVG from '../components/common/svg/Arrow';
 import BlubSVG from '../components/common/svg/Blub';
 import Wave1 from '../components/common/svg/Wave1';
 import Wave2 from '../components/common/svg/Wave2';
+import Project from '../components/index/Project';
 import Testimonials from '../components/index/Testimonials';
 
 const Home: NextPage = () => {
@@ -95,12 +96,35 @@ const Home: NextPage = () => {
                             <div className="pt-10 text-center lg:hidden">{t('section_quote_small')}</div>
                             <Link href="/team" legacyBehavior>
                                 <Button
-                                    className="m-auto ml-auto mr-auto mt-5 mb-20 lg:m-0 text-lg"
+                                    className="m-auto ml-auto mr-auto mt-5 lg:m-0 text-lg"
                                     text={t('learn_more_about_us')}
                                     hasArrow={true}
                                 ></Button>
                             </Link>
                         </div>
+                    </div>
+                </div>
+                <div className="p-5">
+                    <h3 className="text-center">{t('portfolio_preTitle')}</h3>
+                    <h2 className="text-center">{t('portfolio_Title')}</h2>
+                    <h4 className="text-center">{t('portfolio_Description')}</h4>
+                    <div className="justify-center my-10 grid lg:grid-cols-2 gap-5 lg:px-20">
+                        <Project
+                            Title={t('portfolio_gibz_Title')}
+                            ImageSrc="/images/projects/gibz.png"
+                            ImageAlt="Preview of AMZ Racing Website"
+                            Description={t('portfolio_gibz_Description')}
+                            ButtonLabel="app store"
+                            ButtonLink="https://apps.apple.com/de/app/gibz/id1519809150?ign-itscg=30200&ign-itsct=apps_box_badge"
+                        />
+                        <Project
+                            Title={t('portfolio_amz_Title')}
+                            ImageSrc="/images/projects/amzracing.png"
+                            ImageAlt="Preview of AMZ Racing Website"
+                            Description={t('portfolio_amz_Description')}
+                            ButtonLabel="amzracing.ch"
+                            ButtonLink="https://www.amzracing.ch/"
+                        />
                     </div>
                 </div>
             </main>
