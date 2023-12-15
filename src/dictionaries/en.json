@@ -1,9 +1,97 @@
 {
-    "server-component": {
-        "welcome": "Welcome"
+    "common": {
+        "nav_1": "Home",
+        "nav_2": "Our Services",
+        "nav_3": "Team",
+        "nav_4": "Terms of Service",
+        "nav_5": "Privacy Policy",
+        "contact_us": "Contact us",
+        "page_not_found": "Page not found",
+        "go_home": "Go home",
+        "footerText": "We are a young and motivated software development team based in Switzerland. It's our passion to turn your digital dream project into reality. Never think that a project would be impossible. We are happy to connect with you and discuss your idea.",
+        "validation_error_required": "This field is required.",
+        "validation_error_email": "Please enter a valid email address."
     },
-    "counter": {
-        "increment": "Increment",
-        "decrement": "Decrement"
+    "contact": {
+        "contact_meta_title": "Contact us | Codelance GmbH",
+        "contact_meta_description": "Contact us for any questions or concerns you may have about our products or services.",
+        "contact_meta_keywords": "contact, questions, concerns, products, services",
+        "contact_title": "Contact us",
+        "contact_subtitle": "If you want to contact us you can fill out the following form:",
+        "contact_form_title": "contact form",
+        "contact_name": "Name",
+        "contact_name_placeholder": "Jason Warner",
+        "contact_email": "Email",
+        "contact_email_placeholder": "jason@gmail.com",
+        "contact_message": "Message",
+        "contact_message_placeholder": "Write your message here...",
+        "contact_send": "Send Message",
+        "contact_response_time": "Response time: 48 hours",
+        "contact_toast_loading": "Sending message...",
+        "contact_toast_success": "Message sent successfully!",
+        "contact_toast_error": "Error sending message!"
+    },
+    "home": {
+        "metaDescription": "Codelance GmbH is a software development company based in Baar, Switzerland. We develop web applications and mobile apps for startups and enterprises. We are experts in React, React Native, Node.js, and Next.js. We also provide consulting services for startups and enterprises. If you are looking for a software development company, you are in the right place.",
+        "metaKeywords": "software development company, software development, software development services, software development agency, software development firm, software development companies, software development outsourcing, Software Development, Web Development, Mobile App Development, React, React Native, Node.js, Next.js, Startups, Consulting, Baar, Switzerland",
+        "slogan_1": "Turn your",
+        "slogan_2": "IT idea into",
+        "slogan_3": "reality.",
+        "quote": "Let us help bring your IT project to life, from websites and customer apps to unique online products. Schedule a consultation with us to discuss your ideas and we'll find the perfect solution for you.",
+        "learn_more": "Learn more",
+        "learn_more_about_us": "learn more",
+        "section_title": "Our Team",
+        "section_quote": "We are a young, dynamic team specialized in the implementation of IT projects. We are your partner for the implementation of IT projects and the optimization of your IT infrastructure. Realize your IT projects with us and benefit from our many years of experience and know-how. We support you in the implementation of your IT projects and accompany you from planning to realization. We are your partner for the implementation of your IT projects. You have an idea? We make it real.",
+        "section_quote_small": "We are a skilled team specializing in IT project implementation. As your partner, we support you from planning to realization and optimize your IT infrastructure. Have an idea? We'll make it happen.",
+        "portfolio_preTitle": "Portfolio",
+        "portfolio_Title": "Check out our latest work",
+        "portfolio_Description": "Our goal is to create effective digital experiences that make people’s lives easier and better. We hope our work is a reflection of this.",
+        "portfolio_gibz_Title": "Canton Zug: GIBZ App Design",
+        "portfolio_gibz_Description": "With this project, we were able to create a new app design for the GIBZ vocational school. This allowed us to make an important contribution to the school's digital presence.",
+        "portfolio_amz_Title": "ETH AMZ Racing: New website",
+        "portfolio_amz_Description": "Another project was the development of the new website for AMZ Racing. For this project we relied on the latest technologies. To realize this website with excellent performance, a modern design and a user-friendly UI."
+    },
+    "services": {
+        "title": "Our Services",
+        "services_meta_title": "Our Services | Codelance GmbH",
+        "services_meta_description": "We offer a wide range of services. We build websites, develop apps, design websites, optimize websites for search engines, provide digital marketing services, and provide web hosting.",
+        "services_meta_keywords": "services, website, app, design, seo, digital marketing, web hosting, codelance, codelance gmbh, codelance gmbh services, codelance gmbh website, codelance gmbh app, codelance gmbh design, codelance gmbh seo, codelance gmbh digital marketing, codelance gmbh web hosting",
+        "service_1_name": "Building Websites",
+        "service_1_description": "We build websites that are fast, responsive, and easy to use. We use the latest technologies to ensure your website is future-proof. We also provide ongoing support and maintenance for your website. Furthermore, we help you find the best content management system for your needs. The content management system should be easy to use and should allow you to update your website yourself.",
+        "service_2_name": "App Development",
+        "service_2_description": "Do you require an app for your business? We can help you to develop an app that will help you to grow your business. We can develop apps for both Android and iOS. Likewise, we can also help you to develop a web app that will work on all devices. We can help you find the best technology for your app.",
+        "service_3_name": "Web Design",
+        "service_3_description": "A good-looking website is important for your business. We can design your website that will help you to grow your business and attract new customers. Your company doesn't have a brand? We can help you to create a brand for your business that will help you to stand out from your competitors. ",
+        "service_4_name": "SEO",
+        "service_4_description": "Search Engine Optimization (SEO) is essential for your business to get found online. A good-looking website is not enough if you won't be found online. We have many optimization techniques that will help your business to get found online. To optimize your SEO, it is indispensable to know your target audience. We're creating a strategy that will help you reach your target audience.",
+        "service_5_name": "Digital Marketing",
+        "service_5_description": "The internet is a great way to reach your target audience. So it is important to have an excellent digital marketing strategy. With analytics, we can see how your website is performing and how your target audience is interacting with your website. With this information, we can create a strategy that will help you to reach your potential customer.",
+        "service_6_name": "Web Hosting",
+        "service_6_description": "Finished a project and need a place to host your project? With our web hosting service, we make sure your website is always online and secure. In addition, we provide your project with a matching domain name. You can also use our web hosting service to host your email. We provide you with a professional email address that will help you to stand out from your competitors."
+    },
+    "team": {
+        "team_meta_title": "Our Team | Codelance GmbH",
+        "team_meta_description": "Codelance is a young company that specializes in the development of websites, apps and software. Noah Emmenegger, Jan Walker, Julian Emmenegger and Giorgio Franco are the founders and developers of the company.",
+        "team_meta_keywords": "Codelance, Team, Noah Emmenegger, Jan Walker, Julian Emmenegger, Giorgio Franco, Developer, Software, Website, App, Baar, canton Zug, Switzerland",
+        "team_title": "Our Team",
+        "team_more": "more",
+        "person_1_function": "Full-Stack Developer",
+        "person_1_description": "Noah Emmenegger, an ardent full-stack developer, founded this company with the unwavering commitment to assist other organizations in realizing their IT dreams.",
+        "person_2_function": "Full-Stack Developer",
+        "person_2_description": "Jan Walker helps you scale your solution according to any situation through his experience in one of the largest pharmaceutical and diagnostic companies in the world.",
+        "person_3_function": "UX-Designer",
+        "person_3_description": "Julian Emmenegger, experienced mediamatician and passionate UX designer, transforms creative IT ideas into feasible solutions and supports clients in realizing their visions.",
+        "person_4_function": "Full-Stack Developer",
+        "person_4_description": "Giorgio Franco is a determined software developer who is constantly expanding his skills and acquiring new ones. He values customer contact very much as well as the regular exchange with them."
+    },
+    "testimonials": {
+        "title": "Testimonials",
+        "subtitle": "What our customers say about us",
+        "1_position": "Project Manager GIBZ App",
+        "1_quote": "We really like the design of the new GIBZ app! Our ideas and suggestions were always well received, critically scrutinized and professionally implemented.",
+        "2_position": "Owner of faragulo.ch",
+        "2_quote": "A young and very ambitious team! I am very satisfied with the service offered and can only recommend Codelance GmbH!",
+        "3_position": "CEO at Company",
+        "3_quote": "The tight schedule was always adhered to and adjustments on the part of the customer were very responded very flexibly"
     }
 }

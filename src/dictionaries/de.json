@@ -1,9 +1,97 @@
 {
-    "server-component": {
-        "welcome": "Willkommen"
+    "common": {
+        "nav_1": "Startseite",
+        "nav_2": "Dienstleistungen",
+        "nav_3": "Team",
+        "nav_4": "Nutzungsbedingungen",
+        "nav_5": "Datenschutz",
+        "contact_us": "Kontaktieren Sie uns",
+        "page_not_found": "Seite nicht gefunden",
+        "go_home": "Zurück zur Startseite",
+        "footerText": "Wir sind ein junges und motiviertes Software-Entwicklungsteam mit dem Sitz in der Schweiz. Es ist unsere Leidenschaft, Ihr digitales Traumprojekt in die Realität umzusetzen. Denken Sie nie, dass ein Projekt unmöglich wäre. Wir freuen uns darauf, mit Ihnen in Kontakt zu treten und Ihre Idee zu besprechen.",
+        "validation_error_required": "Dieses Feld ist erforderlich.",
+        "validation_error_email": "Bitte geben Sie eine gültige E-Mail Adresse ein."
     },
-    "counter": {
-        "increment": "Zuwachs",
-        "decrement": "Dekrementieren"
+    "contact": {
+        "contact_meta_title": "Kontaktieren Sie uns | Codelance GmbH",
+        "contact_meta_description": "Sie haben Fragen oder Anregungen? Wir freuen uns auf Ihre Kontaktaufnahme.",
+        "contact_meta_keywords": "Kontakt, Fragen, Anliegen, Produkte, Dienstleistungen",
+        "contact_title": "Kontaktieren Sie uns",
+        "contact_subtitle": "Wenn Sie uns kontaktieren möchten, können Sie das folgende Formular ausfüllen:",
+        "contact_form_title": "Kontaktformular",
+        "contact_name": "Name",
+        "contact_name_placeholder": "Jason Warner",
+        "contact_email": "E-Mail",
+        "contact_email_placeholder": "jason@gmail.com",
+        "contact_message": "Nachricht",
+        "contact_message_placeholder": "Schreiben Sie Ihre Nachricht hier...",
+        "contact_send": "Nachricht senden",
+        "contact_response_time": "Antwortzeit: 48 Stunden",
+        "contact_toast_loading": "Sending message...",
+        "contact_toast_success": "Nachricht erfolgreich gesendet!",
+        "contact_toast_error": "Fehler beim Senden der Nachricht!"
+    },
+    "home": {
+        "metaDescription": "Codelance GmbH ist ein Softwareentwicklungsunternehmen mit Sitz in Baar, Schweiz. Wir entwickeln Webanwendungen und mobile Apps für Startups und Unternehmen. Wir sind Experten in React, React Native, Node.js und Next.js. Wir bieten auch Beratungsdienstleistungen für Startups und Unternehmen an. Wenn Sie auf der Suche nach einem Softwareentwicklungsunternehmen sind, sind Sie bei uns genau richtig.",
+        "metaKeywords": "Softwareentwicklungsunternehmen, Softwareentwicklung, Softwareentwicklungsdienste, Softwareentwicklungsagentur, Softwareentwicklungsfirma, Softwareentwicklungsunternehmen, Softwareentwicklungsoutsourcing, Softwareentwicklung, Webentwicklung, Mobile App Entwicklung, React, React Native, Node.js, Next.js, Startups, Beratung, Baar, Schweiz",
+        "slogan_1": "Setzen Sie",
+        "slogan_2": "Ihr IT-Projekt",
+        "slogan_3": "um.",
+        "quote": "Wir helfen Ihnen, Ihr IT-Projekt zum Leben zu erwecken, von Websites und Kundenanwendungen bis hin zu einzigartigen Online-Produkten. Vereinbaren Sie einen Beratungstermin mit uns, um Ihre Ideen zu besprechen, und wir werden die perfekte Lösung für Sie finden.",
+        "learn_more": "Mehr erfahren",
+        "learn_more_about_us": "Mehr über uns",
+        "section_title": "Unser Team",
+        "section_quote": "Wir sind ein junges, dynamisches Team, das sich auf die Umsetzung von IT-Projekten spezialisiert hat. Wir sind Ihr Partner für die Umsetzung von IT-Projekten und die Optimierung Ihrer IT-Infrastruktur. Realisieren Sie Ihre IT-Projekte mit uns und profitieren Sie von unserer langjährigen Erfahrung und unserem Know-how. Wir unterstützen Sie bei der Umsetzung Ihrer IT-Projekte und begleiten Sie von der Planung bis zur Realisierung. Wir sind Ihr Partner für die Umsetzung Ihrer IT-Projekte. Sie haben eine Idee? Wir machen sie real.",
+        "section_quote_small": "Wir sind ein erfahrenes Team, das sich auf die Umsetzung von IT-Projekten spezialisiert hat. Als Ihr Partner unterstützen wir Sie von der Planung bis zur Realisierung und optimieren Ihre IT-Infrastruktur. Haben Sie eine Idee? Wir machen sie Realität.",
+        "portfolio_preTitle": "Portfolio",
+        "portfolio_Title": "Entdecken Sie unsere neuesten Projekte",
+        "portfolio_Description": "Unser Ziel ist es, effektive digitale Erfahrungen zu schaffen, die das Leben der Menschen einfacher und besser machen. Wir hoffen, dass unsere Arbeit dieses Ziel widerspiegelt.",
+        "portfolio_gibz_Title": "Kanton Zug: GIBZ App Design",
+        "portfolio_gibz_Description": "Mit diesem Projekt durften wir für die Berufsschule GIBZ ein neues App-Design erstellen. Wodurch wir einen wichtigen Beitrag zur digitalen Präsenz der Schule leisten konnten.",
+        "portfolio_amz_Title": "ETH AMZ Racing: Neue Webseite",
+        "portfolio_amz_Description": "Ein weiteres Projekt war die Entwicklung der neuen Webseite für AMZ Racing. Bei diesem Projekt setzten wir auf neuste Technologien. Um diese Webseite mit exzellenter Performance, einem modernen Design und mit benutzerfreundlichem UI zu realisieren."
+    },
+    "services": {
+        "title": "Unsere Dienstleistungen",
+        "services_meta_title": "Unsere Dienstleistungen | Codelance GmbH",
+        "services_meta_description": "Wir bieten Ihnen eine Vielzahl von Dienstleistungen an, die Ihnen helfen, Ihr Unternehmen auszubauen. Wir können Ihnen helfen, eine Website zu erstellen, eine App zu entwickeln, eine Marke zu schaffen, Ihre SEO zu optimieren und vieles mehr.",
+        "services_meta_keywords": "Dienstleistungen, Webseiten erstellen, App-Entwicklung, Webdesign, SEO, Digitales Marketing, Webhosting",
+        "service_1_name": "Webseiten erstellen",
+        "service_1_description": "Wir erstellen Websites, die schnell, reaktionsschnell und einfach zu bedienen sind. Wir verwenden die neuesten Technologien, um sicherzustellen, dass Ihre Website zukunftssicher ist. Wir bieten auch laufende Unterstützung und Wartung für Ihre Website. Ausserdem helfen wir Ihnen, das beste Content-Management-System für Ihre Bedürfnisse zu finden. Das Content-Management-System sollte einfach zu bedienen sein und es Ihnen ermöglichen, Ihre Website selbst zu aktualisieren.",
+        "service_2_name": "App-Entwicklung",
+        "service_2_description": "Benötigen Sie eine App für Ihr Unternehmen? Wir können Ihnen helfen, eine App zu entwickeln, die Ihnen hilft, Ihr Geschäft zu vergrössern. Wir können Apps sowohl für Android als auch für iOS entwickeln. Ebenso können wir Ihnen helfen, eine Web-App zu entwickeln, die auf allen Geräten funktioniert. Wir können Ihnen helfen, die beste Technologie für Ihre App zu finden.",
+        "service_3_name": "Webdesign",
+        "service_3_description": "Eine gut aussehende Website ist wichtig für Ihr Unternehmen. Wir können Ihre Website so gestalten, dass sie Ihnen hilft, Ihr Geschäft auszubauen und neue Kunden zu gewinnen. Ihr Unternehmen hat keine Marke? Wir können Ihnen helfen, eine Marke für Ihr Unternehmen zu schaffen, mit der Sie sich von Ihren Mitbewerbern abheben können. ",
+        "service_4_name": "SEO",
+        "service_4_description": "Suchmaschinenoptimierung (SEO) ist für Ihr Unternehmen unerlässlich, um online gefunden zu werden. Eine gut aussehende Website ist nicht genug, wenn Sie online nicht gefunden werden. Wir haben viele Optimierungstechniken, die Ihrem Unternehmen helfen werden, online gefunden zu werden. Um Ihre SEO zu optimieren, ist es unerlässlich, Ihre Zielgruppe zu kennen. Wir erstellen eine Strategie, die Ihnen helfen wird, Ihre Zielgruppe zu erreichen.",
+        "service_5_name": "Digitales Marketing",
+        "service_5_description": "Das Internet ist eine grossartige Möglichkeit, Ihre Zielgruppe zu erreichen. Deshalb ist es wichtig, eine ausgezeichnete digitale Marketingstrategie zu haben. Mit Analytics können wir sehen, wie Ihre Website funktioniert und wie Ihre Zielgruppe mit Ihrer Website interagiert. Mit diesen Informationen können wir eine Strategie entwickeln, die Ihnen hilft, Ihre potenziellen Kunden zu erreichen.",
+        "service_6_name": "Webhosting",
+        "service_6_description": "Sie haben ein Projekt abgeschlossen und brauchen einen Ort, um Ihr Projekt zu hosten? Mit unserem Webhosting-Service sorgen wir dafür, dass Ihre Website immer online und sicher ist. Darüber hinaus stellen wir Ihrem Projekt einen passenden Domainnamen zur Verfügung. Sie können unseren Webhosting-Service auch zum Hosten Ihrer E-Mails nutzen. Wir stellen Ihnen eine professionelle E-Mail-Adresse zur Verfügung, mit der Sie sich von Ihren Mitbewerbern abheben können."
+    },
+    "team": {
+        "team_meta_title": "Unser Team | Codelance GmbH",
+        "team_meta_description": "Codelance ist eine junge Firma, die sich auf die Entwicklung von Webseiten, Apps und Software spezialisiert hat. Noah Emmenegger, Jan Walker, Julian Emmenegger und Giorgio Franco sind die Gründer und Entwickler der Firma.",
+        "team_meta_keywords": "Codelance, Team, Noah Emmenegger, Jan Walker, Julian Emmenegger, Giorgio Franco, Entwickler, Webseiten, Apps, Software, Baar, Kanton Zug, Schweiz",
+        "team_title": "Unser Team",
+        "team_more": "mehr",
+        "person_1_function": "Full-Stack-Entwickler",
+        "person_1_description": "Noah Emmenegger, ein leidenschaftlicher Full-Stack-Entwickler, gründete dieses Unternehmen mit dem festen Willen, andere Organisationen bei der Verwirklichung ihrer IT-Träume zu unterstützen.",
+        "person_2_function": "Full-Stack-Entwickler",
+        "person_2_description": "Jan Walker hilft Ihnen ihre Lösung nach jeder Situation zu skalieren durch seine Erfahrung in einem der grössten Pharma- und Diagnostikunternehmen der Welt.",
+        "person_3_function": "UX-Designer",
+        "person_3_description": "Julian Emmenegger, erfahrener Mediamatiker und leidenschaftlicher UX-Designer, verwandelt kreative IT-Ideen in realisierbare Lösungen und unterstützt Kunden bei der Umsetzung ihrer Visionen.",
+        "person_4_function": "Full-Stack-Entwickler",
+        "person_4_description": "Giorgio Franco ist ein zielstrebiger Softwareentwickler, der kontinuierlich seine Fähigkeiten erweitert und sich immer wieder neue aneignet. Er schätzt den Kundenkontakt sehr sowie auch den regelmässigen Austausch mit ihnen."
+    },
+    "testimonials": {
+        "title": "Referenzen",
+        "subtitle": "Was unsere Kunden über uns sagen",
+        "1_position": "Projektleiter GIBZ App",
+        "1_quote": "Das Design der neuen GIBZ App gefällt uns wirklich gut! Unsere Ideen und Anregungen wurden immer gut aufgenommen, kritisch hinterfragt und professionell umgesetzt.",
+        "2_position": "Inhaber von faragulo.ch",
+        "2_quote": "Junges und sehr ambitioniertes Team! Ich bin sehr zufrieden mit der angebotenen Dienstleistung und kann die Codelance GmbH nur weiterempfehlen!",
+        "3_position": "CEO bei Company",
+        "3_quote": "Den straffen Zeitplan wurde stets eingehalten und auf Anpassungen seitens Kunde wurde sehr flexibel reagiert"
     }
 }

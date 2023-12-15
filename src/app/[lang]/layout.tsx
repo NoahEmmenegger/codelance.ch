@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import { i18n } from './../../../i18-config';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 export async function generateStaticParams() {
     return i18n.locales.map((locale) => ({ lang: locale }));
@@ -8,7 +10,11 @@ export async function generateStaticParams() {
 export default function Root({ children, params }: { children: React.ReactNode; params: { lang: string } }) {
     return (
         <html className="bg-accent" lang={params.lang}>
-            <body>{children}</body>
+            <body>
+                <Header lang={params.lang} />
+                <main>{children}</main>
+                <Footer />
+            </body>
         </html>
     );
 }
