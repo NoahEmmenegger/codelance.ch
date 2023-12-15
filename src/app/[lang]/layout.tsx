@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { i18n } from './../../../i18-config';
 
 export async function generateStaticParams() {
@@ -6,13 +7,28 @@ export async function generateStaticParams() {
 
 export default function Root({ children, params }: { children: React.ReactNode; params: { lang: string } }) {
     return (
-        <html lang={params.lang}>
+        <html className="bg-accent" lang={params.lang}>
             <body>{children}</body>
         </html>
     );
 }
 
-export const metadata = {
-    title: 'i18n within app directory - Vercel Examples',
-    description: 'How to do i18n in Next.js 13 within app directory',
+export const metadata: Metadata = {
+    title: 'Codelance GmbH',
+    description: 'Codelance GmbH',
+    authors: [{ name: 'Noah Emmenegger' }],
+    metadataBase: new URL('https://www.codelance.ch'),
+    openGraph: {
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Codelance GmbH',
+        images: [
+            {
+                url: 'Codelance_logo.png',
+            },
+        ],
+    },
+    robots: 'all',
 };
