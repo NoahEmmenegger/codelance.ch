@@ -1,7 +1,5 @@
-import { useTranslation } from 'next-i18next';
 import { useEffect, useState } from 'react';
-import { Validator } from '../../types/Validation';
-import validate from '../../utils/validation';
+import useTranslation from '../../hooks/useTranslations';
 
 type TextInputProps = {
     id: string;

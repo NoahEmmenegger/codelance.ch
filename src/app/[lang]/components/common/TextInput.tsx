@@ -1,5 +1,5 @@
-import { useTranslation } from 'next-i18next';
 import { useEffect, useState } from 'react';
+import useTranslation from '../../hooks/useTranslations';
 import { Validator } from '../../types/Validation';
 import validate from '../../utils/validation';
 

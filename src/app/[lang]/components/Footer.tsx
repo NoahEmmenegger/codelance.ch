@@ -1,6 +1,6 @@
-import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import Link from 'next/link';
+import useTranslation from '../hooks/useTranslations';
 import LanguageSwitcher from './common/LanguageSwitcher';
 import FooterWave from './common/svg/FooterWave';
 

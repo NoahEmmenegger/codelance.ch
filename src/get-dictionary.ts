@@ -1,4 +1,4 @@
-import 'server-only';
+'server-only';
 import type { Locale } from './../i18-config';
 
 // We enumerate all dictionaries here for better linting and typescript support

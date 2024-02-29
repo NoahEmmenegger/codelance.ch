@@ -11,7 +11,7 @@ export default async function IndexPage({ params: { lang } }: { params: { lang: 
         <div>
             <LocaleSwitcher />
             <p>Current locale: {lang}</p>
-            <p>This text is rendered on the server: {dictionary['server-component'].welcome}</p>
+            <p>This text is rendered on the server: </p>
         </div>
     );
 }

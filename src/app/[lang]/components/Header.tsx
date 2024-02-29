@@ -1,3 +1,4 @@
+'use client';
 import { getDictionary } from '@/get-dictionary';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
