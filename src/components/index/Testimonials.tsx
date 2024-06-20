@@ -60,17 +60,17 @@ export default function Testimonials() {
                     }
                 }}
             >
-                <Testimonial name="Herbert Sterchi" position={t('5_position')} image={true}>
-                    {t('5_quote', { ns: 'testimonials' })}
+                <Testimonial name="Peter Gisler" position={t('1_position')} image={true}>
+                    {t('1_quote', { ns: 'testimonials' })}
                 </Testimonial>
                 <Testimonial name="Jonas Hauser" position={t('4_position')} image={true}>
                     {t('4_quote', { ns: 'testimonials' })}
                 </Testimonial>
-                <Testimonial name="Peter Gisler" position={t('1_position')} image={true}>
-                    {t('1_quote', { ns: 'testimonials' })}
-                </Testimonial>
                 <Testimonial name="Dario Faragulo" position={t('2_position')} image={true}>
                     {t('2_quote', { ns: 'testimonials' })}
+                </Testimonial>
+                <Testimonial name="Herbert Sterchi" position={t('5_position')} image={true}>
+                    {t('5_quote', { ns: 'testimonials' })}
                 </Testimonial>
             </div>
             <div>
